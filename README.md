@@ -68,6 +68,7 @@ The gap between hobbyists and people earning income from AI is architecture: how
 | 24 | [Twitter Stock Research Pipeline](./projects/24-twitter-stock-research/)  | 3–4   | Zero-touch pipeline from X bookmarks to a stock-research system: scheduled scrape + AI classification into Obsidian, a 500+-ticker tracker with weekday price refresh (FMP), and on-demand Claude valuation sessions. Now layering trend analysis (crowd vs. street) | May 17, 2026 | 🔄 Active  |
 | 25 | [Taste Interview: Voice Profile](./projects/25-taste-interview/)          | 3–4   | 100-question Claude-conducted interview extracting my personal writing voice into a profile any AI writing task can load. Checkpointed, hard-rule tagged, drafting exercises included | May 28, 2026 | ✅ Done    |
 | 26 | [Forge: AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/)     | 4–5   | From-scratch AI-native fund administration platform: audit-grade, replayable accounting core built via a two-tier Claude workflow (architect sessions → gated Claude Code phases → adversarial multi-agent review) | Jun 3, 2026  | 🔄 Active  |
+| 27 | [SBGC CLT — STORM Research Synthesis](./projects/27-sbgc-clt-storm/)       | 3–4   | Test of Stanford's STORM / Co-STORM multi-perspective article generation over a built corpus, used to review a community group's community-land-trust research. First run underdelivered — anchoring on one source doc narrowed the synthesis; rebuild planned | Jun 2026     | 🔄 Active  |
 
 ### PortCo Value Creation Agents
 
@@ -320,38 +321,20 @@ research finding. Project 06 marked ✅ Done.
   each fund's signed log replays byte-for-byte against its attestation. ~140 tests green.
   Next up is the valuation-judgment wedge. Full write-up on the project page.
 
-### Month 5: Advanced Architecture
-*Roadmap phase. Work started early (see Month 3 above).*
-
-### Month 6: Reputation & Income
-*Not started*
-
----
-
-## Resources
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
-- [Interactive Prompt Tutorial (GitHub)](https://github.com/anthropics/prompt-eng-interactive-tutorial)
-- [Getting Started with the API](https://docs.anthropic.com/en/docs/initial-setup)
-- [Tool Use Guide](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)
-- [Anthropic Academy (Skilljar)](https://anthropic.skilljar.com)
-- [Building Effective Agents](https://docs.anthropic.com/en/docs/agents-and-tools/overview)
-
----
-
-## Stack
-- **Languages:** JavaScript / Node.js · Python · HTML/CSS
-- **Models:** Claude Haiku (scraping/summarization) · Claude Sonnet (reasoning, drafting, agents)
-- **Key libraries:** `@anthropic-ai/sdk` · Playwright · pandas · numpy · scikit-learn · rapidfuzz · Pydantic · yfinance · openpyxl · ReportLab · pypdf
-- **Tools:** Obsidian + Web Clipper · Claude Code · Cowork · GitHub · QuickBooks Online · Plaid · Supabase · Kalshi · Alpaca · Financial Modeling Prep (MCP) · EasyPost · Warp Freight · Excel · Streamlit · Plotly · Jupyter
-
----
-
-## About
-**Starting point:** Basic Python; no prior API or agent experience  
-**Domain:** Finance, compliance, private-equity value creation, nonprofit ops, household automation, and trading  
-**Goal:** Over 6 months, build a portfolio that shows what's possible when you use Claude
-as an actual engineering partner, not a chatbot. Document the work publicly.
-
----
-
-*Started: March 1, 2026 · Updated: June 23, 2026*
+**Status sweep (Jun 25)**
+- **Forge (26)**: core is published and at rest — `main` equals `origin/main`, CI green,
+  and all five fund anchors replay byte-identical. Recent sessions closed backlog cleanly
+  rather than opening new ground: LP self-service (own class economics + a quarterly LP
+  report), a real web-build gate in CI, toolchain bumps, and a Next.js security patch.
+  Next, deferred to its own checkpointed session, is byte-exact seed surgery to fold a
+  fund's reapply step into the seed. Strategic frame now explicit: Forge is the
+  reproducible layer-1 of a three-layer "company brain," sold to GPs through Wacker, with
+  pricing tied to provable correctness.
+- **Twitter Stock Research (24)**: added more tickers and began measuring returns by
+  sector — watch-list sectors against everything else — to see where the bookmarked crowd
+  clusters versus where performance actually is. Expanding the analysis next.
+- **SBGC CLT — STORM (27, new)**: tested STORM and Co-STORM over a built corpus to review
+  a community group's community-land-trust research. First run underdelivered — I anchored
+  the synthesis on a single referenced doc, which narrowed and biased the output away from
+  what the multi-perspective method is for. Logged as a useful negative result; rebuild is
+  to feed a broader, 

@@ -1,6 +1,6 @@
 # Forge — AI-Native Fund Accounting ERP
 
-**Status:** 🔄 Active — working demo shipped; now through ASC 946 statements  
+**Status:** 🔄 Active — core published and at rest; all funds reproduce byte-identical  
 **Started:** June 3, 2026  
 **Code:** Private build — details deliberately high-level here  
 
@@ -57,33 +57,25 @@ system rather than a graph:
   the projection-state hash byte-for-byte against the issued attestation, so tampering or
   drift is detectable after the fact.
 
-Next: the valuation-judgment wedge — making each mark's rationale a signed, permanent part
-of the record — and per-LP statement fan-out from the dimensioned allocation lines.
+**At rest and fully published (June 25).** The core is stable, not mid-build: `main`
+equals `origin/main`, CI is green on both jobs, and all five fund anchors replay
+byte-identical against their attestations. The last several sessions closed a run of small
+backlog items cleanly rather than opening new territory:
 
-## Key Decisions
+- **LP self-service (closed Jun 24)** — an LP can see their own class economics plus a
+  quarterly LP report. This is the investor-facing surface Wacker would hand a GP's LPs.
+- **CI hygiene, web build gate, and a security patch (Jun 25)** — added a real web-app
+  build step to CI (the root cause turned out to be a dev-mode flag leaking into the
+  build, not the framework bug the backlog had assumed), bumped the toolchain, and applied
+  the Next.js security patch that closes a known CVE chain.
 
-**Domain expert in the loop, on the record.** Claude drafts the accounting logic; I
-correct it as the CPA — and the corrections get logged, not just applied. The marketplace
-scan found no existing Claude skill or tool that does fund accounting at all. That gap is
-the opportunity.
+The architecture underneath: an event-sourced ERP where each fund's git repo is the source
+of truth, Postgres is a rebuildable projection cache, every event is Ed25519-signed and
+hash-chained, and `forge verify-reproducibility` checks the attestations — running locally
+via Docker Compose.
 
-**Gates, not momentum.** Big phases get subdivided rather than rushed at the end of a long
-context window, and irreversible steps get their own focused, pre-planned sessions.
-
-**Honesty as a feature.** After the adversarial review, demo claims that the code couldn't
-back were treated as bugs of the highest severity.
-
-## Lessons Learned
-
-An AI can write production-grade accounting software in days — if a domain expert designs
-the decision process around it. Every hard problem so far has been an accounting judgment
-or a process-design question, not a coding question. The two-tier prompt-file workflow
-(architect sessions producing versioned prompts, implementation gated behind verification)
-is the most repeatable engineering pattern I've found in six months of building.
-
-And: adversarial review is non-negotiable. The system was confidently wrong in ways that
-only an agent tasked with *proving the demo dishonest* actually caught.
-
----
-
-*Part of the [Claude Architect Journey](../../README.md)*
+Next (scoped, not started): folding a fund's reapply step into the seed so a clean run
+natively emits the canonical event log, byte-identical to its anchor. It's flagged as
+anchor-sensitive, byte-exact seed surgery and deliberately deferred to its own dedicated
+session with a checkpoint plan and a hard stop if byte-identity proves infeasible — a
+one-way door, tr
