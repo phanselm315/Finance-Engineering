@@ -6,8 +6,9 @@
 ## What This Is
 
 AI-powered infrastructure for a marketing company. Building the full stack: AI image
-generation for client deliverables, marketing program design frameworks, and brand
-strategy systems. Personal project — building the backend for my wife's business.
+generation for client deliverables, marketing program design frameworks, brand
+strategy systems, and SEO/GEO (generative-engine optimization) audits. Personal project —
+building the backend for my wife's business.
 
 ## Architecture
 
@@ -15,6 +16,8 @@ strategy systems. Personal project — building the backend for my wife's busine
 - **Program design:** Claude-assisted marketing program frameworks — structured templates
   that generate campaign logic from client inputs
 - **Brand strategy:** AI-assisted brand positioning and messaging frameworks
+- **SEO / GEO audits:** search-engine and generative-engine optimization audits — how a
+  client's brand surfaces in both traditional search and AI-generated answers
 
 ## Key Decisions
 
@@ -32,11 +35,3 @@ treat as optional. Building this in from the start rather than retrofitting late
 Building for someone you know and care about is a different kind of accountability than
 building for a client. There's nowhere to hide when the end user is sitting across from
 you at dinner. This project gets better faster because the feedback loop is immediate
-and honest.
-
-AI image generation has matured to the point where the bottleneck is now prompt quality
-and workflow design — not the models themselves.
-
----
-
-*Part of the [Claude Architect Journey](../../README.md)*

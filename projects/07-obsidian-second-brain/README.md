@@ -18,6 +18,10 @@ densely linked web of notes. Capture was the first phase. Synthesis is now the m
   - **Web Clipper** — browser extension that clips web content straight into the vault
   - **YouTube transcript template** — captures a video's raw transcript with metadata in a
     consistent format, so it arrives synthesis-ready rather than as an unstructured dump
+  - **X / Twitter bookmark ingest** — a scheduled agent pulls my X bookmarks into the vault,
+    scrubbing my own handle before anything touches disk and routing each item to the right
+    track; stock ideas go to the Stock Research track (Project 24), everything else lands as
+    synthesis-ready source notes
 - **Synthesis layer:** the heart of the system now. Claude works captured material into
   two outputs that compound differently — **synthesized writing** (essays, arguments, and
   distilled pieces drawn from across the vault) and **structural linking** (maps of
@@ -59,11 +63,4 @@ apart — the linking a human wouldn't do by hand, but that produces real insigh
 surfaced.
 
 The vault's stock-idea track grew into its own project — the
-[Twitter Stock Research Pipeline](../24-twitter-stock-research/) (Project 24) — and is
-now the vault's fastest-growing area, with trend analysis layered on top of the ticker
-tracker. Synthesis volume keeps climbing alongside it: new synthesized essays and maps
-of content landing through early June 2026.
-
----
-
-*Part of the [Claude Architect Journey](../../README.md)*
+[Twitter Stock Research Pipeline](../24-twitter-stock-rese

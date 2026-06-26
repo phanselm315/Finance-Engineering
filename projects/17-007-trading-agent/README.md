@@ -5,8 +5,10 @@
 
 ## What This Is
 
-A multi-agent equities trading system — a working clone of the published "TradingAgents"
-multi-agent framework, rebuilt from scratch on the native Anthropic SDK. Specialized
+A multi-agent equities trading system — a working clone of the published *"TradingAgents:
+Multi-Agents LLM Financial Trading Framework"* (arXiv:
+[2412.20138](https://arxiv.org/abs/2412.20138), Yijia Xiao, Edward Sun, Di Luo, and Wei
+Wang; first posted December 2024), rebuilt from scratch on the native Anthropic SDK. Specialized
 agents ingest market data, analyze it, argue opposite sides of every trade, size the
 position, and clear it against risk limits before anything reaches a broker. Built May 16;
 now running a live, multi-day paper-trading week against a real brokerage account — the
@@ -73,9 +75,4 @@ layer rather than treat the pipeline as "fixed."
 A guardrail that lives only in an agent's reasoning is invisible to the next reader.
 Promote it into code, and into the artifact itself, so the caveat travels with the result.
 
-The first real broker interaction surfaces breakage no test reached. Verify against the
-real adapter, not just an in-house stand-in.
-
----
-
-*Part of the [Claude Architect Journey](../../README.md)*
+The first real broker interaction surface

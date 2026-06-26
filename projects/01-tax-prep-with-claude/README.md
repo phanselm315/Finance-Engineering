@@ -1,7 +1,7 @@
 # Tax Prep with Claude
 
 **Status:** ✅ Done  
-**Started:** Early 2026  
+**Started:** April 2026  
 
 ## What This Is
 

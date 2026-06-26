@@ -10,7 +10,7 @@ milestones, and weekly notes.
 ## Who I Am
 CPA and problem solver. My background is in consulting for private equity and hedge funds, largely focused on process optimization and controls. I'm relentless about delivering for the people who depend on me. I won't leave a broken process alone.
 
-The last time a technology hit me like this was 1998. Grade school. Our family got a
+The last time a technology hit me like this was in 1998 when our family got a
 computer and AOL for the first time. That same feeling (*the world just changed and I need
 to understand everything about it*) is exactly what happened when I started building
 seriously with Claude. Except now I know enough from my education and day job to build something useful.
@@ -24,6 +24,51 @@ The gap between hobbyists and people earning income from AI is architecture: how
 - Build every single week. No reading-only weeks.
 - Ship publicly. Every project gets a README and a demo.
 - Use Claude to build with Claude (yes, it's meta).
+
+---
+
+## The Arc
+
+The projects below are the *what*. This is the *how* — and it's the part that actually
+compounded. Over six months my unit of work kept moving up a level of abstraction:
+
+1. **Copy-pasting prompts.** One prompt, one answer, into the chat box. My voice and my
+   context lived in my head and got retyped every time.
+2. **Into Claude Code.** Stopped pasting and let Claude touch the codebase directly. The
+   loop tightened from "ask, paste, fix" to "describe, review, ship."
+3. **Into a single agent.** Handed off a whole task to an agent that planned and executed
+   on its own, instead of me steering every step.
+4. **Into multi-agent orchestration.** Agents that argue opposite sides, review each
+   other, and clear work against an independent veto — the 007 trading debate, Forge's
+   adversarial reviewers tasked with proving the build dishonest.
+5. **Into agent loops.** Gated, self-checking build loops: a versioned phase prompt feeds
+   Claude Code, which implements behind hard stop conditions, which feeds a review pass
+   that either passes or kicks it back. Progress stops being vibes.
+6. **Into loops of loops.** Where the AI-native ERP build (Forge) actually lives — nested
+   loops where the *process* of building is itself an orchestrated system, not a person
+   running a checklist.
+
+The next move is the meta one: take every lesson from the Forge build and from my own
+machine setup, synthesize them, and stand up a reusable **AI engineering team** in Claude
+Code — then point it at the next project. Lessons stop being trapped inside one build and
+start compounding across all of them. That's the whole thesis: not "I used AI to build a
+thing," but "I built the system that builds the things, and it gets better every cycle."
+
+### Where This Is Headed
+
+*A light read of the tea leaves — to be sharpened against my own synthesis notes (Nate
+Jones and others) once they're in.*
+
+The leverage is moving from the model to the **orchestration around it**. Models are
+becoming a commodity input; the durable edge is the ability to design loops-of-loops, encode
+real domain judgment into them, and make the output *provable* rather than merely plausible.
+The people who win this next phase won't be the ones with access to the best model — everyone
+will have that. They'll be the ones who can turn their own expertise into a system that runs
+without them, and prove it was right. Reproducibility and taste become the moat. That's the
+bet the whole portfolio is built on, and where I think everything is going.
+
+> **Note to self / Claude:** this prophecy is deliberately light. Drop the relevant Second
+> Brain synthesis notes here and I'll rewrite it in your voice, grounded in the actual reading.
 
 ---
 
@@ -46,14 +91,14 @@ The gap between hobbyists and people earning income from AI is architecture: how
 
 | #  | Project                         | Month | Description                                                                                                                    | Started      | Status    |
 |----|---------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------|--------------|-----------|
-| 01 | [Tax Prep with Claude](./projects/01-tax-prep-with-claude/)             | 1     | Used Claude alongside Free Tax USA to work through a full personal tax filing. First high-stakes real-world AI use             | Early 2026   | ✅ Done    |
+| 01 | [Tax Prep with Claude](./projects/01-tax-prep-with-claude/)             | 2     | Used Claude alongside Free Tax USA to work through a full personal tax filing. First high-stakes real-world AI use             | Apr 2026     | ✅ Done    |
 | 02 | [First API Call](./projects/02-first-api-call/)                         | 1     | Node.js script making a live Claude API call. The foundational proof of concept                                                | Mar 9, 2026  | ✅ Done    |
 | 03 | [Municipal Meeting Scanner](./projects/03-municipal-meeting-scanner/)   | 1–2   | Node.js + Playwright + Claude API: scrapes ~20 gov websites weekly, extracts housing/zoning items into a formatted HTML report  | Mar 9, 2026  | ✅ Done    |
 | 04 | [Business Prompt Library](./projects/04-business-prompt-library/)       | 1–2   | 6 production Claude skills: CFO/CCO advisory, SEC compliance, investment accounting, email drafting, website copy, resume       | Mar 2026     | ✅ Done    |
 | 05 | [Workforce Housing Analyzer](./projects/05-workforce-housing-analyzer/) | 2     | Iterative Excel + AI parcel analysis tool for Leelanau County land acquisition campaign (v3 → v102+)                           | Mar 2026     | 🔄 Active  |
 | 06 | [Kalshi Trading](./projects/06-kalshi-trading/)                         | 2–3   | Academic paper → trading bot → research finding: live paper-trading and a 1,274-market calibration study showed Kalshi's BTC binaries are well-calibrated with no directional edge. Result published on SSRN (June 2026) | Apr 2, 2026  | ✅ Done    |
-| 07 | [Obsidian Second Brain](./projects/07-obsidian-second-brain/)           | 2–3   | Knowledge system on Obsidian, now a working synthesis engine: standardized capture templates (Web Clipper, YouTube transcripts) feed Claude-assisted synthesized writing and densely linked maps of content | Apr 13, 2026 | 🔄 Active  |
-| 08 | [Aether Advisors](./projects/08-aether-advisors/)                       | 2–3   | AI-powered marketing company build: AI image generation, marketing program design, brand strategy                               | Apr 23, 2026 | 🔄 Active  |
+| 07 | [Obsidian Second Brain](./projects/07-obsidian-second-brain/)           | 2–3   | Knowledge system on Obsidian, now a working synthesis engine: standardized capture templates (Web Clipper, YouTube transcripts, X/Twitter bookmark ingest) feed Claude-assisted synthesized writing and densely linked maps of content | Apr 13, 2026 | 🔄 Active  |
+| 08 | [Aether Advisors](./projects/08-aether-advisors/)                       | 2–3   | AI-powered marketing company build: AI image generation, marketing program design, brand strategy, SEO/GEO audits               | Apr 23, 2026 | 🔄 Active  |
 | 09 | [Monthly Financials Builder](./projects/09-monthly-financials-builder/) | 2–3   | Python CLI: auto-assembles board financial package (cover page, donations PDF, expenses, bank statements) from QBO exports      | Apr 23, 2026 | ✅ Done    |
 | 10 | [Email Eval Framework](./projects/10-email-eval-framework/)             | 3     | HTML evaluation system for scoring AI-drafted community emails against strict brand voice rules                                 | Apr 2026     | ✅ Done    |
 | 11 | [Parish Bookkeeping System](./projects/11-parish-bookkeeping-system/)   | 3     | Documenting 30-year undocumented processes, automating QBO workflows for 2 churches + school + ministries, training new hire   | Apr 2026     | 🔄 Active  |
@@ -62,9 +107,8 @@ The gap between hobbyists and people earning income from AI is architecture: how
 | 14 | [Claude Audit](./projects/14-claude-audit/)                             | 3     | Python script to audit and clean up a computer's file system using AI                                                          | May 7, 2026  | ✅ Done    |
 | 15 | [Family Flow App](./projects/15-family-flow-app/)                       | 3     | Personal app: shared calendar aggregation, grocery store hidden API integration (via Claude Code), financial dashboard, Plaid   | Mar 2026     | 🔄 Active  |
 | 16 | [Wacker Advisors OS](./projects/16-wacker-advisors-os/)                 | 3     | Full AI-powered operating system for a one-man outsourced CFO/CCO/COO firm. Every workflow automated or AI-assisted            | Mar 2026     | 🔄 Active  |
-| 17 | [007 Trading Agent](./projects/17-007-trading-agent/)                   | 3–5   | Multi-agent equities trading system: a from-scratch clone of the "TradingAgents" framework. ~10 agents ingest data, debate the call, and clear it against an independent risk veto; ~20 hardening sprints in, live paper run begins May 26 | May 16, 2026 | 🔄 Active  |
+| 17 | [007 Trading Agent](./projects/17-007-trading-agent/)                   | 3–5   | Multi-agent equities trading system: a from-scratch clone of the "TradingAgents" framework (Xiao, Sun, Luo & Wang, arXiv:2412.20138). ~10 agents ingest data, debate the call, and clear it against an independent risk veto; ~20 hardening sprints in, live paper run begins May 26 | May 16, 2026 | 🔄 Active  |
 | 18 | [Grok Brain Export](./projects/18-grok-brain-export/)                   | 3     | Export and clean Grok AI outputs and conversation history for structured integration into Obsidian second brain                 | May 2026     | ✅ Done    |
-| 19 | [Email Rip: Secret CFO](./projects/19-email-rip-secret-cfo/)            | 3     | Email content scraper and Claude analysis pipeline. Extracting, categorizing, and synthesizing the Secret CFO newsletter archive | May 2026     | ✅ Done    |
 | 24 | [Twitter Stock Research Pipeline](./projects/24-twitter-stock-research/)  | 3–4   | Zero-touch pipeline from X bookmarks to a stock-research system: scheduled scrape + AI classification into Obsidian, a 500+-ticker tracker with weekday price refresh (FMP), and on-demand Claude valuation sessions. Now layering trend analysis (crowd vs. street) | May 17, 2026 | 🔄 Active  |
 | 25 | [Taste Interview: Voice Profile](./projects/25-taste-interview/)          | 3–4   | 100-question Claude-conducted interview extracting my personal writing voice into a profile any AI writing task can load. Checkpointed, hard-rule tagged, drafting exercises included | May 28, 2026 | ✅ Done    |
 | 26 | [Forge: AI-Native Fund Accounting ERP](./projects/26-forge-fund-erp/)     | 4–5   | From-scratch AI-native fund administration platform: audit-grade, replayable accounting core built via a two-tier Claude workflow (architect sessions → gated Claude Code phases → adversarial multi-agent review) | Jun 3, 2026  | 🔄 Active  |
@@ -89,12 +133,6 @@ MOIC story. All public on GitHub, all on synthetic data with production-grade lo
 ## Weekly Log
 
 ### Month 1: Foundation (Early–March 2026)
-
-**Tax Season (Early 2026)**
-First high-stakes Claude use: worked through a full personal tax filing using Free Tax USA
-with Claude as a co-pilot. Looking up deductions, interpreting edge cases, checking my
-logic. Not a "project" in the traditional sense, but the experience that showed me Claude
-could handle real professional work with the right guidance, not just demos.
 
 **Week 1 (Mar 9)**
 Shipped the first API call: a six-line Node.js script that hit Claude Haiku and got a
@@ -147,6 +185,13 @@ the right call.
 **Email Eval Framework (Apr 2026)**
 HTML scoring system for reviewing AI-drafted community emails against non-profit's strict brand
 voice and terminology rules. First structured evaluation layer.
+
+**Tax Prep with Claude (April 2026)**
+First high-stakes Claude use: worked through a full personal tax filing using Free Tax USA
+with Claude as a co-pilot — deduction lookups, edge cases, logic-checking my own reasoning
+under real deadline pressure. Not a "project" in the traditional sense, but the experience
+that showed me Claude could handle real professional work with the right guidance, not just
+demos. Everything else in this portfolio traces back to it.
 
 ---
 
@@ -213,11 +258,6 @@ record becomes the project's research paper.
 Exporting and cleaning Grok AI conversation history since 2025 and outputs for structured integration
 into the Obsidian second brain. Turning raw AI interaction history into searchable,
 linked knowledge.
-
-**Email Rip: Secret CFO (May 2026)**
-Email content scraper and Claude analysis pipeline targeting the Secret CFO newsletter
-archive. Extracting, categorizing, and synthesizing content for reference and pattern
-analysis.
 
 **Working Capital Agent (May 22): ahead of roadmap**
 A portfolio-company value-creation demo: an agentic accounts-receivable diagnostic and
@@ -303,38 +343,3 @@ A full pass across the open board:
   a summary package built from the Claude-drafted documentation.
 - **Obsidian Second Brain (07)**: synthesis volume still climbing; the Stock Research
   track is now the vault's fastest-growing area.
-- **Grok Brain Export (18)** and **Email Rip: Secret CFO (19)**: both complete; marked ✅ Done.
-
-**Kalshi Trading: Published (Jun 6)**
-The negative result became a paper: *"Are Bitcoin Daily Binary Prediction Markets
-Efficient? Calibration Evidence from 1,274 Settled Kalshi Contracts and a Live
-Out-of-Sample Trading Experiment"*, now on
-[SSRN](https://ssrn.com/abstract=6891438). The project that started April 2 as an
-academic question, became a live trading bot, and found no edge, closes as a published
-research finding. Project 06 marked ✅ Done.
-
-**Status sweep (Jun 23)**
-- **Forge (26)**: the demo I targeted for June 8 landed, and the build kept going. Since
-  then: a distribution-waterfall engine, statement renderers, and ASC 946 financial
-  statements (Statement of Assets & Liabilities, Operations, Schedule of Investments,
-  Financial Highlights) generated from the FactSet, plus `verify-reproducibility` proving
-  each fund's signed log replays byte-for-byte against its attestation. ~140 tests green.
-  Next up is the valuation-judgment wedge. Full write-up on the project page.
-
-**Status sweep (Jun 25)**
-- **Forge (26)**: core is published and at rest — `main` equals `origin/main`, CI green,
-  and all five fund anchors replay byte-identical. Recent sessions closed backlog cleanly
-  rather than opening new ground: LP self-service (own class economics + a quarterly LP
-  report), a real web-build gate in CI, toolchain bumps, and a Next.js security patch.
-  Next, deferred to its own checkpointed session, is byte-exact seed surgery to fold a
-  fund's reapply step into the seed. Strategic frame now explicit: Forge is the
-  reproducible layer-1 of a three-layer "company brain," sold to GPs through Wacker, with
-  pricing tied to provable correctness.
-- **Twitter Stock Research (24)**: added more tickers and began measuring returns by
-  sector — watch-list sectors against everything else — to see where the bookmarked crowd
-  clusters versus where performance actually is. Expanding the analysis next.
-- **SBGC CLT — STORM (27, new)**: tested STORM and Co-STORM over a built corpus to review
-  a community group's community-land-trust research. First run underdelivered — I anchored
-  the synthesis on a single referenced doc, which narrowed and biased the output away from
-  what the multi-perspective method is for. Logged as a useful negative result; rebuild is
-  to feed a broader, 
