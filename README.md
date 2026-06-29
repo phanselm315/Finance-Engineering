@@ -37,9 +37,10 @@ My workflow has shifted as I've tried to make AI do real work instead of just ge
 text. Early on I was copy-pasting prompts that I worked on in Grok, Claude, or Chat GPT and fixing the output by hand. Then I started letting Claude edit code directly. After that I began handing off bigger tasks to agents that could plan and iterate on their own.
 
 More recently I've been building more structure around the agents: having them review each
-other's work (the 007 trading debate, Forge's adversarial reviewers), gating build loops
-behind explicit checks, and — most recently — a setup that spins up isolated coding agents
-and gates their changes before anything merges. That last one is the current experiment I'm
+other's work including the codebase as it is being written, gating build loops behind
+explicit checks, and — most recently — a setup that spins up isolated coding agents to do
+the work inside a sandboxed, gated environment, so I can review the finished result instead
+of steering every step. That last one is the current experiment I'm
 calling [Sass Factory](./projects/28-sass-factory/). It isn't a new
 paradigm; it's just the latest attempt to stop being the bottleneck on every change.
 
