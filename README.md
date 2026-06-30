@@ -41,7 +41,7 @@ A build loop where work can't merge until it's proven. It spawns coding agents i
 
 ## Engineering for Trust
 
-One instinct runs through all of it: output has to be verifiable and hard to silently degrade. That's a controls habit, not an AI one — gates inside gates, human approval before any agent touches the outside world, replayable cores where a discrepancy is always a real signal.
+One instinct runs through all of it: output has to be verifiable and hard to silently degrade. That's a controls habit, not an AI one — gates inside gates, human approval before any agent touches the outside world, replayable cores where a discrepancy is always a real signal. And in my experience, that human-approval step does more than catch errors — it's how a person keeps ownership of the system and what it produces, instead of deferring to the model.
 
 The model is rented and commoditizing. The durable asset is the implementation layer around it — the encoded judgment, domain rules, checks, and audit trails. Exactly the layer institutional finance has always cared about most.
 
