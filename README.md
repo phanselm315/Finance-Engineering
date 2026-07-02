@@ -2,7 +2,7 @@
 
 I solve finance operating problems for private capital.
 
-For fifteen years, I have worked inside PE-backed finance organizations — Big Four, Northern Trust, fund administration, a Kirkland-adjacent platform — rebuilding the machinery institutional finance actually runs on: fund and portco accounting, controllership, compliance, and reporting — ASC 946 statements, ERP implementations, close processes, audit and custody readiness, distribution waterfalls, and LP reporting.
+For fifteen years, I have worked inside the institutions that run private capital's finance function — Big Four, Northern Trust fund administration, a Kirkland-adjacent platform — rebuilding the machinery institutional finance actually runs on: fund and portco accounting, controllership, compliance, and reporting — ASC 946 statements, ERP implementations, close processes, audit and custody readiness, distribution waterfalls, and LP reporting.
 
 Today AI lets me encode those operating models into software. That's the only reason AI is in this repo at all — it's the newest implementation layer for work I've been doing my whole career.
 
