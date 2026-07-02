@@ -86,7 +86,7 @@ Adjacent work — good builds, but supporting evidence rather than the main thes
 
 Python · TypeScript · FastAPI · async SQLAlchemy · PostgreSQL · Next.js / React. Claude as the primary model (Haiku for extraction, Sonnet for reasoning and agents); Grok and local models in the mix. Controls-grade hygiene: pytest, strict mypy, Docker, signed artifacts, CI gates, custom MCP servers and Claude skills. Finance plumbing through QuickBooks Online, Plaid, and Financial Modeling Prep.
 
-The full chronological record of every build is in [`LOG.md`](./LOG.md).
+The full parts list — connectors, skills, and orchestration — is in [`TOOLSTACK.md`](./TOOLSTACK.md); the chronological record of every build is in [`LOG.md`](./LOG.md).
 
 ---
 

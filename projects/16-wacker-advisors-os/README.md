@@ -32,6 +32,34 @@ letters, and quarterly reports. Infrastructure is production-ready.
 **Design principle:** Zero-touch where possible, one-touch for exceptions. Peter reviews
 and approves; the system executes.
 
+## The Compounding Layer — the brain
+
+The automation is the visible part, but it isn't the point. The point is that the firm's
+knowledge compounds instead of evaporating. In a normal advisory practice the hard-won
+judgment — how a particular client's compliance calendar really works, why we word an
+engagement letter the way we do, what went wrong last quarter and how we fixed it — lives
+in one operator's head and dies at the end of each engagement. Here it lives in persistent
+context and memory files: a **brain** the system reads at the start of every session and
+writes back to at the end.
+
+That read-then-write loop is what makes the practice compound. Every session starts already
+knowing the business state, the client roster, the active OKRs, and the current
+constraints, so no time is spent re-establishing context. Every correction, decision, and
+finished deliverable feeds back into the files, so the next session starts smarter than the
+last. The skills themselves run the same loop: `upwork-proposal` keeps a running lessons
+file so each edited proposal sharpens the next draft, and a feedback log captures anything
+that got corrected mid-session. Knowledge earned once is reused indefinitely.
+
+This is the firm-scale version of the thesis behind the whole repo — **institutional memory
+as software.** The model is rented and commoditizing; the durable asset is the accumulated,
+owned judgment layer around it. It's also why each additional client adds less marginal
+effort than the last: the work isn't re-derived, it's inherited from the brain.
+
+The honest caveat: it only compounds if the write-back discipline holds. A brain that isn't
+fed goes stale and, worse, confidently wrong — which is exactly why memory hygiene is a
+first-class chore here (the `consolidate-memory` pass exists to merge duplicates and prune
+stale facts), not an afterthought.
+
 ## Key Decisions
 
 **Build the OS before the client load.** Infrastructure built under pressure gets built
