@@ -111,7 +111,9 @@ Every build, in order.
 
 **Month 6 — Deploy & Apply**
 - Underway: the repositioning above, outreach, and first paid work.
+- Repositioned the portfolio's front matter to a "Finance Engineering" thesis — the top-level README now leads with the operating-model-first argument and three carrying builds.
+- **Status sweep (Jul 3):** Forge came off "at rest" — the value-creation layer advanced with a further CI-green increment and a larger test suite. Sass Factory ran a full end-to-end self-advancing cycle and tightened its gate chain with a new check. The 007 paper-trading run is still live into early July. Obsidian's synthesis/structural-linking layer got another upgrade. Wacker OS is running live consultancy work with the public website in final design, still pre-launch. SBGC STORM and Content Factory unchanged. Repo housekeeping: recovered three project READMEs (Wacker OS, Twitter Stock Research, Forge) that a bad snapshot had truncated mid-file.
 
 ---
 
-*Started: March 1, 2026 · Updated: June 29, 2026 · Inspired by [@cyrilXBT's roadmap](https://x.com/cyrilXBT).*
+*Started: March 1, 2026 · Updated: July 3, 2026 · Inspired by [@cyrilXBT's roadmap](https://x.com/cyrilXBT).*

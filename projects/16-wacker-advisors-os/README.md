@@ -86,9 +86,10 @@ serving four client profiles — emerging fund managers and family offices, inde
 sponsors and search funds, PE/VC portfolio companies, and owner-operated private
 businesses. The v2 website shell reflecting the new positioning was built June 1.
 
-As of late June, the OS is no longer just infrastructure-in-waiting — I'm running it on
-live consultancy work, with the website launch impending. The system is proving itself on
-real engagements rather than rehearsals.
+As of early July, the OS is no longer just infrastructure-in-waiting — I'm running it on
+live consultancy work, with the public website now in final design ahead of launch (still
+pre-launch as of July 3). The system is proving itself on real engagements rather than
+rehearsals.
 
 ## Lessons Learned
 

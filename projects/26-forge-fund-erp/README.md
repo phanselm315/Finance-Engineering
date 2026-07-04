@@ -1,8 +1,8 @@
 # Forge — AI-Native Fund Accounting ERP
 
-**Status:** 🔄 Active — carried-interest attestation and first value-creation-layer increment both published and CI-green; project at rest  
+**Status:** 🔄 Active — back off rest; value-creation layer advancing with a further CI-green increment and a larger test suite  
 **Started:** June 3, 2026  
-**Last updated:** July 1, 2026  
+**Last updated:** July 3, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
@@ -115,6 +115,12 @@ is green now, and the lesson is recorded where it belongs: the close gate must r
 checker too, and a "clean" self-report is a claim to verify, not to trust. The failure was
 exactly the one the skipped pre-publish pass existed to catch — which is the argument for the
 gate, made the hard way.
+
+**Back off rest (Jul 3).** Forge came out of "at rest" and picked the value-creation layer
+back up: a further increment shipped CI-green, and the test suite grew again from the 620-test
+baseline. The layer stays anchor-neutral — additive, off-surface work under the lighter review
+tier — so it keeps advancing without touching the attested core. (Specifics tracked in the
+private build repo.)
 
 ## Key Decisions
 

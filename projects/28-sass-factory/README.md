@@ -1,6 +1,6 @@
 # Sass Factory — Gated Software Factory
 
-**Status:** 🔄 Active — spine through gated reap working; now self-advancing (building its own backlog)  
+**Status:** 🔄 Active — self-advancing loop has run a full end-to-end cycle; gate chain gained a new check  
 **Started:** June 25, 2026  
 **Code:** Private build — kept high-level here; clean-room by design  
 
@@ -39,6 +39,15 @@ PR rather than self-merging, so the one-way door stays reversible.
   deliverable through a headless coding agent, gates on `check-all`, commits on green, and
   advances to the next — no human shuttling prompts between sessions. The queue *is* the
   handoff.
+
+## Current Milestone
+
+**Full self-advancing cycle, end to end (Jul 3).** The loop has now run a complete cycle on
+its own: the driver pulled an ordered backlog, ran each deliverable through a headless coding
+agent, gated on `check-all`, committed on green, and advanced — no human shuttling prompts
+between sessions. The gate chain also gained a new check, tightening the merge boundary further.
+Proof-before-merge held throughout: the factory kept building only what its own gates would pass.
+(Specifics tracked in the private build repo.)
 
 ## Key Decisions
 

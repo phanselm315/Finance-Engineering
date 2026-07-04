@@ -68,6 +68,10 @@ now the vault's fastest-growing area, with trend analysis layered on top of the 
 tracker. Synthesis volume keeps climbing alongside it: new synthesized essays and maps
 of content landing through early June 2026.
 
+A further upgrade to the synthesis and structural-linking layer since then (through early
+July 2026) deepened how maps of content and cross-links are built — pushing the vault
+further from filing cabinet toward thinking tool.
+
 ---
 
 *Part of [Finance Engineering](../../README.md)*
