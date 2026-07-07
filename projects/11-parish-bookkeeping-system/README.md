@@ -5,8 +5,8 @@
 
 ## What This Is
 
-Interim bookkeeper for a parish — 2 churches, a school, and several ministries. The
-previous bookkeeper had 30 years of undocumented institutional knowledge. Scope:
+Interim bookkeeper for a parish — 2 churches, a school, and several ministries. Thirty
+years of institutional knowledge had never been written down. Scope:
 document every process from scratch, integrate all platforms with QuickBooks, move
 paper workflows to digital, and write a full training manual for the incoming hire.
 

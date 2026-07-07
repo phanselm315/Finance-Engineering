@@ -5,7 +5,7 @@
 
 ## What This Is
 
-A knowledge management system built on Obsidian — now a working synthesis engine
+A knowledge management system built on Obsidian — now a working synthesis workflow
 rather than just a capture vault. Research, articles, and video content come in
 through standardized templates; Claude helps turn them into synthesized writing and a
 densely linked web of notes. Capture was the first phase. Synthesis is now the main event.
@@ -18,7 +18,7 @@ densely linked web of notes. Capture was the first phase. Synthesis is now the m
   - **Web Clipper** — browser extension that clips web content straight into the vault
   - **YouTube transcript template** — captures a video's raw transcript with metadata in a
     consistent format, so it arrives synthesis-ready rather than as an unstructured dump
-  - **X / Twitter bookmark ingest** — a scheduled agent pulls my X bookmarks into the vault,
+  - **X / Twitter bookmark ingest** — a scheduled job pulls my X bookmarks into the vault,
     scrubbing my own handle before anything touches disk and routing each item to the right
     track; stock ideas go to the Stock Research track (Project 24), everything else lands as
     synthesis-ready source notes
@@ -48,10 +48,8 @@ from a filing cabinet into a thinking tool.
 
 ## Lessons Learned
 
-A knowledge system lives or dies on its synthesis layer. The shift this project went
-through — from "capture everything" to "synthesize relentlessly" — is the whole game.
-Captured notes that are never processed don't compound; synthesized writing and linked
-maps of content do.
+A knowledge system lives or dies on its synthesis layer. Captured notes that are never
+processed don't compound; synthesized writing and linked maps of content do.
 
 Standardized capture is what makes synthesis scale. Once every source — a clipped article,
 a YouTube transcript — arrives in the same shape, Claude can synthesize across them without
@@ -65,12 +63,7 @@ surfaced.
 The vault's stock-idea track grew into its own project — the
 [Twitter Stock Research Pipeline](../24-twitter-stock-research/) (Project 24) — and is
 now the vault's fastest-growing area, with trend analysis layered on top of the ticker
-tracker. Synthesis volume keeps climbing alongside it: new synthesized essays and maps
-of content landing through early June 2026.
-
-A further upgrade to the synthesis and structural-linking layer since then (through early
-July 2026) deepened how maps of content and cross-links are built — pushing the vault
-further from filing cabinet toward thinking tool.
+tracker.
 
 ---
 

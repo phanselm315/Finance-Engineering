@@ -1,14 +1,14 @@
 # Aether Advisors
 
-**Status:** 🔄 Active  
+**Status:** ⏸️ Paused  
 **Started:** Apr 23, 2026  
 
 ## What This Is
 
-AI-powered infrastructure for a marketing company. Building the full stack: AI image
-generation for client deliverables, marketing program design frameworks, brand
-strategy systems, and SEO/GEO (generative-engine optimization) audits. Personal project —
-building the backend for my wife's business.
+Scoped the AI back office for a family marketing business — AI image generation for
+client deliverables, marketing program design frameworks, brand strategy systems, and
+SEO/GEO (generative-engine optimization) audits. Personal project — my wife's business.
+Scoping and early experiments only; nothing shipped yet.
 
 ## Architecture
 
@@ -19,23 +19,11 @@ building the backend for my wife's business.
 - **SEO / GEO audits:** search-engine and generative-engine optimization audits — how a
   client's brand surfaces in both traditional search and AI-generated answers
 
-## Key Decisions
-
-**Build the infrastructure before the client load.** Marketing agencies often try to
-deliver AI-assisted work before the systems are solid and end up with inconsistent output
-quality. Building the infrastructure first means the first client deliverable comes from
-a production system, not a prototype.
-
-**AI image generation as a core capability, not an add-on.** The cost and speed
-advantages of AI-generated imagery over traditional creative production are too large to
-treat as optional. Building this in from the start rather than retrofitting later.
-
 ## Lessons Learned
 
 Building for someone you know and care about is a different kind of accountability than
 building for a client. There's nowhere to hide when the end user is sitting across from
-you at dinner. This project gets better faster because the feedback loop is immediate
-and honest.
+you at dinner. This project gets better faster because the feedback loop is immediate.
 
 AI image generation has matured to the point where the bottleneck is now prompt quality
 and workflow design — not the models themselves.

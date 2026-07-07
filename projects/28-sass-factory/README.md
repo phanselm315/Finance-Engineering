@@ -64,18 +64,18 @@ ready to ship anything else.
 
 **Clean-room, provenance clean.** Built from my understanding of the pattern rather than
 ported from the MIT-licensed original, with influences credited — to keep commercialization
-options open and the lineage honest.
+options open.
 
 ## Lessons Learned
 
-This is the Arc's "loops of loops" generalized. Forge was a nested-loop system built to
+This is the gated build-loop pattern from Forge, generalized. Forge was a nested-loop
+system built to
 produce one product, with me still running the build. Sass Factory extracts that build
-process into a reusable, self-advancing system — the difference between running the loops
-and owning the factory that runs them.
+process into a reusable, self-advancing system.
 
 The hard problems were boundaries, not code: where the one-way doors are, what a gate must
 guarantee before it lets a change through, and how an unattended loop fails *closed* instead
-of shipping something unchecked. Same lesson as Forge, one level up — proof is the product.
+of shipping something unchecked. Same lesson as Forge, one level up.
 
 ---
 

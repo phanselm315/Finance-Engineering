@@ -5,9 +5,10 @@
 
 ## What This Is
 
-Six production-grade Claude skills covering CFO/CCO advisory, SEC compliance, investment
+Six Claude skills in daily use covering CFO/CCO advisory, SEC compliance, investment
 company accounting, community email drafting, website copy, and resume building. All
-deployed and in active use in Cowork.
+deployed and in active use in Cowork. This page also covers the two builds that grew out
+of the library: the brand-voice scoring tool and the resume skill.
 
 ## Architecture
 
@@ -26,10 +27,13 @@ Each skill is a structured system prompt with:
 - `website-copy` — Wacker Advisors public-facing content
 - `resume-builder` — Tailored resume generation from job descriptions
 
+All compliance output is reviewed and owned by me — the skills accelerate, they don't
+decide.
+
 ## Key Decisions
 
 **Hard rules over soft instructions.** Early prompts used language like "try to" and
-"generally." Production skills use "never," "always," and explicit flags for when the
+"generally." Skills in real use need "never," "always," and explicit flags for when the
 model must stop and ask. The difference in output consistency is significant.
 
 **Context files over long prompts.** Each skill reads external files at session start
@@ -38,18 +42,10 @@ and makes updates a file edit rather than a prompt rewrite.
 
 **Separate skills per domain.** A single "do everything" prompt produces mediocre results
 across all domains. A tightly scoped skill with deep context on one domain produces
-expert-level output. Scope traded for quality.
+markedly better output than a generic prompt. Scope traded for quality.
 
-## Lessons Learned
+## The Scoring Layer
 
-A well-structured system prompt with hard rules and rich context is 10x more useful than
-a generic prompt. This is the same principle that makes good software architecture: the
-constraint creates the capability.
-
-The investment in building these skills upfront compounds across every session. Work that
-used to take an hour of back-and-forth now takes five minutes because the context is
-already loaded.
-
----
-
-*Part of [Finance Engineering](../../README.md)*
+The email skill got a measurement side: a single-file HTML scoring tool that checks
+AI-drafted community emails against the organization's brand voice and terminology rules —
+prohibited terms, required structural elements, tone in

@@ -1,13 +1,15 @@
-# Forge — AI-Native Fund Accounting ERP
+# Forge — AI-Native Fund Accounting Platform
 
-**Status:** 🔄 Active — back off rest; value-creation layer advancing with a further CI-green increment and a larger test suite  
+**Status:** 🔄 Active — value-creation layer advancing, attested core stable  
 **Started:** June 3, 2026  
 **Last updated:** July 3, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
 
-> **Forge is an AI-native ERP for funds and their portfolio companies that keeps books so clean and reproducible that audit and compliance cost almost takes care of itself.**
+Forge is an AI-native fund accounting platform for funds and their portfolio companies,
+built on one idea: books that replay byte-identical from a signed event log are books that
+are cheap to audit and easy to defend.
 
 Most emerging managers can't easily prove how they got a number — a mark, a capital
 balance, a fee calc — until an auditor or LP asks, and then it's a scramble. Forge fixes
@@ -16,9 +18,8 @@ company's operating expense, is recorded once on a signed, reproducible ledger, 
 books follow by rule. The result is audit-ready books as a deliverable, and a valuation
 you can defend without a fire drill.
 
-This is where fifteen years of fund-accounting and audit domain knowledge meets everything
-the previous 25 projects taught me about building with Claude. I've migrated funds onto
-the incumbent platforms — Allvue, Dynamo, eFront; this time I'm building the thing.
+I've migrated funds onto the incumbent platforms — Allvue, Dynamo, eFront. This is the
+platform I'd have wanted on those migrations.
 
 ## How It's Being Built
 
@@ -39,88 +40,39 @@ The build process is the story I can tell publicly. A two-tier Claude workflow:
 - **Persistent project memory.** A living lessons-learned file where every gotcha and
   every binding decision gets logged, so no session starts from zero.
 
-Twenty-six-plus build phases planned and executed across the run, with
-the test suite (now several hundred passing tests, strict type-checking across the codebase) holding the
-line throughout. The first working demo landed on schedule in early June; the build has since pushed past the demo into the accounting engines themselves.
+The architecture underneath: an event-sourced core where each fund's git repo is the
+source of truth, Postgres is a rebuildable projection cache, every event is Ed25519-signed
+and hash-chained, and `forge verify-reproducibility` replays every fund's log and proves
+the projection-state hash byte-for-byte against the issued attestation — so tampering or
+drift is detectable after the fact. ASC 946 financial statements (Statement of Assets &
+Liabilities, Statement of Operations, Schedule of Investments, Financial Highlights),
+distribution waterfalls, and per-class LP economics are all derived from that one log.
 
-## Current Milestone
+## Where It Stands
 
-The demo is real and running: sign in, then an LP-to-portfolio-company drill-in that
-computes indirect ownership exposure deterministically from the event log, plus per-fund
-browse. Since that first demo, the build has added the engines that make it an accounting
-system rather than a graph:
+| Date | Shipped | Verification state |
+|------|---------|-------------------|
+| Early Jun | First working demo: sign-in, LP→portco drill-in computing indirect ownership from the event log, per-fund browse | On schedule |
+| Mid Jun | Distribution-waterfall engine; ASC 946 statement renderers off the event-derived fact store | Tests green |
+| Jun 24 | LP self-service: per-class economics + quarterly LP report | CI green |
+| Jun 25 | CI web-build gate; Next.js security patch (known CVE chain) | At rest: five funds byte-identical, both CI jobs green |
+| Jun 26 | Byte-exact seed surgery — reapply step folded into the seed | Zero event bytes changed; CI green |
+| Late Jun | Per-class LP economics attested; live multi-class fund; MFN better-of-terms logic | Each anchor move: explicit go, pre-planned reseed, triple verification |
+| Jun 30–Jul 1 | Carried interest provable off the attested log; LP display serves attested rows | Six consecutive fresh-process reproducibility runs; all five funds byte-identical; 620 tests passing (0 failed); lint clean |
+| Jul 3 | Value-creation layer increments: predicted, thesis-mapped levers paired by hash to the realized EBITDA-to-equity bridge | CI green; anchor-neutral — pin gate confirmed no attested code touched; suite grew past the 620 baseline |
 
-- **Distribution-waterfall engine** — tiered GP/LP economics computed straight from the log.
-- **Statement renderers and ASC 946 financial statements** — Statement of Assets &
-  Liabilities, Statement of Operations, Schedule of Investments, and Financial Highlights,
-  generated from the FactSet.
-- **`verify-reproducibility`** — replays every fund's signed, hash-chained log and proves
-  the projection-state hash byte-for-byte against the issued attestation, so tampering or
-  drift is detectable after the fact.
+One environmental caveat on the Jun 30 verification: the local Docker engine crashed
+repeatedly on the monolithic test run, so the suite ran per-file per the standing Windows
+protocol; the reproducibility core covers the stability concern independently.
 
-**At rest and fully published (June 25).** The core is stable, not mid-build: `main`
-equals `origin/main`, CI is green on both jobs, and all five fund anchors replay
-byte-identical against their attestations. The last several sessions closed a run of small
-backlog items cleanly rather than opening new territory:
+### A failure worth recording
 
-- **LP self-service (closed Jun 24)** — an LP can see their own class economics plus a
-  quarterly LP report. This is the investor-facing surface Wacker would hand a GP's LPs.
-- **CI hygiene, web build gate, and a security patch (Jun 25)** — added a real web-app
-  build step to CI (the root cause turned out to be a dev-mode flag leaking into the
-  build, not the framework bug the backlog had assumed), bumped the toolchain, and applied
-  the Next.js security patch that closes a known CVE chain.
-
-The architecture underneath: an event-sourced ERP where each fund's git repo is the source
-of truth, Postgres is a rebuildable projection cache, every event is Ed25519-signed and
-hash-chained, and `forge verify-reproducibility` checks the attestations — running locally
-via Docker Compose.
-
-**The one-way door went through (Jun 26).** The byte-exact seed surgery I'd deferred —
-folding a fund's reapply step into the seed so a clean `make demo` natively emits its
-canonical 141-event log — shipped cleanly. The standalone reapply path is retired and
-**zero event bytes changed** against the prior live log; published, both CI jobs green,
-briefly back at rest. The step treated like a one-way door went through without breaking
-byte-identity.
-
-**Since then the economic engines filled in (late June).** Per-class LP economics landed and
-were attested — each share class's economics provable, replayed byte-identical — followed by
-a live multi-class fund, a re-baselining reseed, and MFN "better-of-terms" logic across classes.
-Each of these that moved an anchor got the full one-way-door treatment: my explicit go, a
-pre-planned reseed session, and triple verification.
-
-**Carried-interest attestation — published and live-verified (Jun 30 / Jul 1).** The last
-fund-economics phase for now makes carried interest provable off the attested log rather than
-a witness calculation, with the LP-facing display switched to serve the attested rows. It went
-through its one-way-door merge with my explicit go and is now published. A fresh, read-only
-verification pass then re-earned the "live-verified" badge from a clean rebuild: six
-consecutive fresh-process reproducibility runs, all five funds byte-identical to their pinned
-anchors, the full suite at **620 passing (0 failed)**, and lint clean — with one honest
-environmental caveat (the local Docker engine crashed repeatedly on the monolithic test run, so
-the suite was run per-file per the standing Windows protocol; the reproducibility core covers
-the stability concern independently).
-
-**Now: the value-creation layer's first increment — published and CI-green.** A separate,
-off-surface layer reads off the EBITDA-to-equity bridge already in the ledger — tracking
-predicted, thesis-mapped value-creation levers (an ITA-mapped "predicted add-back," paired to
-the realized bridge by hash) against what actually materializes, per portfolio company and over
-time. It's deliberately *anchor-neutral*: it builds on top of the attested surface without
-registering into it, so it ships at additive speed under a lighter review tier — and the pin
-gate confirmed it moved no anchor and touched no attested code.
-
-One honest note, in keeping with how this project treats mistakes. The increment was pushed
-before its independent pre-publish pass was run, and continuous integration went red for about
-thirteen minutes on a type-check error that the branch's own close gate hadn't caught — it ran
-the linter but not the type checker. It was fixed forward, verified locally the second time, and
-is green now, and the lesson is recorded where it belongs: the close gate must run the type
-checker too, and a "clean" self-report is a claim to verify, not to trust. The failure was
-exactly the one the skipped pre-publish pass existed to catch — which is the argument for the
-gate, made the hard way.
-
-**Back off rest (Jul 3).** Forge came out of "at rest" and picked the value-creation layer
-back up: a further increment shipped CI-green, and the test suite grew again from the 620-test
-baseline. The layer stays anchor-neutral — additive, off-surface work under the lighter review
-tier — so it keeps advancing without touching the attested core. (Specifics tracked in the
-private build repo.)
+The July 3 increment was pushed before its independent pre-publish pass was run, and CI
+went red for about thirteen minutes on a type-check error the branch's close gate hadn't
+caught — it ran the linter but not the type checker. It was fixed forward, verified
+locally the second time, and is green now. The lesson is recorded where it belongs: the
+close gate must run the type checker too, and a "clean" self-report is a claim to verify,
+not to trust.
 
 ## Key Decisions
 
@@ -132,26 +84,24 @@ the opportunity.
 **Gates, not momentum.** Big phases get subdivided rather than rushed at the end of a long
 context window, and irreversible steps get their own focused, pre-planned sessions.
 
-**Match the ceremony to the blast radius.** Not every change deserves the full one-way-door
-apparatus. Work that can move an attested anchor gets heavy review and my explicit go; purely
-additive, off-surface work gets a lighter tier and ships faster. The mechanical test — does the
-attested surface change, does any anchor move — is what tells an unattended loop exactly where
-it must stop and ask for a human. That tiering rule is the safety precondition for automating
-the build itself.
+**Match the ceremony to the blast radius.** Not every change deserves the full heavy-review
+apparatus. Work that can move an attested anchor gets adversarial review and my explicit
+go; purely additive, off-surface work gets a lighter tier and ships faster. The mechanical
+test — does the attested surface change, does any anchor move — tells an unattended loop
+exactly where it must stop and ask for a human.
 
-**Honesty as a feature.** After the adversarial review, demo claims that the code couldn't
-back were treated as bugs of the highest severity.
+**Claims must match code.** After the adversarial review, demo claims that the code
+couldn't back were treated as bugs of the highest severity.
 
-**The strategic frame.** Forge is the reproducible layer-1 of what I think of as a
-three-layer "company brain." The buyer is a GP, reached through Wacker Advisors acting as
-an outsourced operational CFO; the thesis is that *reproducible-for-anyone* collapses
-audit and compliance cost toward zero, with pricing tied to provable correctness rather
-than hours. The end state is real-time continuous reconciliation — the books are never
-"closed" because they're always provable.
+**The strategic frame.** Forge is the reproducible bottom layer of a larger system. The
+buyer is a GP, reached through Wacker Advisors acting as an outsourced operational CFO;
+the thesis is that *reproducible-for-anyone* makes audit support materially cheaper, with
+pricing tied to provable correctness rather than hours. The end state is continuous
+reconciliation — the books are never "closed" because they're always provable.
 
 ## Lessons Learned
 
-An AI can write production-grade accounting software in days — if a domain expert designs
+An AI can write a working, tested accounting core in days — if a domain expert designs
 the decision process around it. Every hard problem so far has been an accounting judgment
 or a process-design question, not a coding question. The two-tier prompt-file workflow
 (architect sessions producing versioned prompts, implementation gated behind verification)

@@ -1,6 +1,6 @@
 # SBGC CLT — STORM / Co-STORM Research Synthesis
 
-**Status:** 🔄 Active — first run underdelivered; rebuild planned  
+**Status:** ⏸️ Paused — first run underdelivered; rebuild planned  
 **Started:** June 2026  
 
 ## What This Is

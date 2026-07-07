@@ -35,7 +35,7 @@ software is the right tool for arithmetic and submission. Claude is the right to
 the judgment calls in between.
 
 **Free Tax USA over a CPA, this year.** Bringing a CPA into a straightforward personal
-return is overkill. With Claude in the loop, "straightforward" stretches further than it
+return was overkill for this return. With Claude in the loop, "straightforward" stretches further than it
 used to — I caught a couple of items I'd have missed on my own. And I'm a CPA.
 
 ## Lessons Learned
@@ -43,7 +43,7 @@ used to — I caught a couple of items I'd have missed on my own. And I'm a CPA.
 This is the project that convinced me Claude could do real professional work, not just
 demos. Working through a real return — with real numbers, real consequences, and the
 deadline pressure of April — is a different test from prompting it to write a poem. It
-passed. Everything else in this portfolio traces back to that.
+passed.
 
 The co-pilot pattern stuck. I use the same shape for legal questions, accounting
 research, and any judgment call where I want a second pair of eyes that's faster than a

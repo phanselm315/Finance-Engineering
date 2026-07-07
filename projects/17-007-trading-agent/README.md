@@ -11,8 +11,7 @@ Multi-Agents LLM Financial Trading Framework"* (arXiv:
 Wang; first posted December 2024), rebuilt from scratch on the native Anthropic SDK. Specialized
 agents ingest market data, analyze it, argue opposite sides of every trade, size the
 position, and clear it against risk limits before anything reaches a broker. Built May 16;
-now running a live, multi-day paper-trading week against a real brokerage account — the
-track record that becomes the project's research paper.
+now in a live, multi-day run in a real broker's paper-trading environment (Alpaca).
 
 ## Architecture
 
@@ -47,7 +46,7 @@ generating trade ideas — the veto has to sit outside the thing it's checking.
 **Backtest → simulation → live, in that order.** Each stage only earns the next. The same
 discipline as Kalshi Trading (Project 06).
 
-**Honest metrics.** The deflated Sharpe drives decisions; raw Sharpe only sanity-checks
+**Metrics.** The deflated Sharpe drives decisions; raw Sharpe only sanity-checks
 that the engine ran. Guardrails flag short-window and low-trade-count artifacts directly
 in the output, so a flattering number can't pass review unchallenged.
 
@@ -57,9 +56,9 @@ Roughly twenty hardening sprints in, the infrastructure the whole build was for 
 The multi-day live paper-trading run against a real Alpaca paper account began May 26,
 2026 and is still going as of early July 2026 — live data and trading testing, extended
 well past the original five-session plan to build a longer record. That track record — with a
-buy-and-hold benchmark and per-decision data-freshness evidence — becomes the results
-section of a research paper modeled on the original TradingAgents paper. The system is
-HOLD-biased by design; a flat or zero-trade week is recorded honestly as a result, not
+buy-and-hold benchmark and per-decision data-freshness evidence — is logged as the run's
+results. The system is
+HOLD-biased by design; a flat or zero-trade week is recorded as a result, not
 patched into a better-looking one.
 
 ## Lessons Learned

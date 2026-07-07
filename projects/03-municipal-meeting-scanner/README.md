@@ -7,7 +7,7 @@
 
 Node.js + Playwright + Claude API. Scrapes ~20 local government websites weekly, extracts
 housing and zoning agenda items with relevance scores, and outputs a formatted HTML report.
-First production tool.
+First tool in real weekly use.
 
 ## Architecture
 

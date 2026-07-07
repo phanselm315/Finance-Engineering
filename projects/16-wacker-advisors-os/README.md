@@ -1,14 +1,15 @@
 # Wacker Advisors OS
 
-**Status:** 🔄 Active  
+**Status:** 🔄 Active — runs the firm's back office; no client engagements yet  
 **Started:** Mar 2026  
 
 ## What This Is
 
-Full AI-powered operating system for a one-man outsourced CFO/CCO/COO advisory firm
-serving emerging fund managers. Every workflow automated or AI-assisted: client onboarding,
-compliance calendar management, deliverable tracking, invoice generation, engagement
-letters, and quarterly reports. Infrastructure is production-ready.
+The operating layer for a one-man outsourced CFO/CCO/COO advisory firm serving emerging
+fund managers. Every workflow automated or AI-assisted: client onboarding, compliance
+calendar management, deliverable tracking, invoice generation, engagement letters, and
+quarterly reports. It runs the firm's own back office today, built ahead of the first
+client engagement.
 
 ## Architecture
 
@@ -24,52 +25,44 @@ letters, and quarterly reports. Infrastructure is production-ready.
 - Root `CLAUDE.md` operating layer — full COO/CFO operations with persistent context
   files, auto-loaded every session (replaced the `pch-advisory` master skill May 2026
   after skills proved to under-trigger)
-- `regpartner` — SEC compliance expert (Form ADV, Form PF, Marketing Rule, Custody Rule)
+- `regpartner` — SEC compliance research (Form ADV, Form PF, Marketing Rule, Custody Rule)
 - `invcogaap` — ASC 946 investment company accounting
 - `website-copy` — brand voice-compliant public content
 - `resume-builder` — tailored resume generation
 
-**Design principle:** Zero-touch where possible, one-touch for exceptions. Peter reviews
-and approves; the system executes.
+**Design principle:** Zero-touch where possible, one-touch for exceptions. I review
+and approve; the system executes. All compliance output is reviewed and owned by me as
+the responsible professional — the skills accelerate, they don't decide.
 
-## The Compounding Layer — the brain
+## The Compounding Layer
 
 The automation is the visible part, but it isn't the point. The point is that the firm's
 knowledge compounds instead of evaporating. In a normal advisory practice the hard-won
-judgment — how a particular client's compliance calendar really works, why we word an
-engagement letter the way we do, what went wrong last quarter and how we fixed it — lives
+judgment — how a particular client's compliance calendar really works, why an engagement
+letter is worded the way it is, what went wrong last quarter and how it was fixed — lives
 in one operator's head and dies at the end of each engagement. Here it lives in persistent
-context and memory files: a **brain** the system reads at the start of every session and
-writes back to at the end.
+context and memory files the system reads at the start of every session and writes back
+to at the end. Every correction, decision, and finished deliverable feeds back into the
+files, so the next session starts smarter than the last. The skills run the same loop:
+`upwork-proposal` keeps a running lessons file so each edited proposal sharpens the next
+draft, and a feedback log captures anything corrected mid-session.
 
-That read-then-write loop is what makes the practice compound. Every session starts already
-knowing the business state, the client roster, the active OKRs, and the current
-constraints, so no time is spent re-establishing context. Every correction, decision, and
-finished deliverable feeds back into the files, so the next session starts smarter than the
-last. The skills themselves run the same loop: `upwork-proposal` keeps a running lessons
-file so each edited proposal sharpens the next draft, and a feedback log captures anything
-that got corrected mid-session. Knowledge earned once is reused indefinitely.
-
-This is the firm-scale version of the thesis behind the whole repo — **institutional memory
-as software.** The model is rented and commoditizing; the durable asset is the accumulated,
-owned judgment layer around it. It's also why each additional client adds less marginal
-effort than the last: the work isn't re-derived, it's inherited from the brain.
-
-The honest caveat: it only compounds if the write-back discipline holds. A brain that isn't
-fed goes stale and, worse, confidently wrong — which is exactly why memory hygiene is a
-first-class chore here (the `consolidate-memory` pass exists to merge duplicates and prune
-stale facts), not an afterthought.
+One caveat: it only compounds if the write-back discipline holds. Memory that isn't fed
+goes stale and, worse, confidently wrong — which is why memory hygiene is a first-class
+chore here (the `consolidate-memory` pass merges duplicates and prunes stale facts), not
+an afterthought.
 
 ## Key Decisions
 
-**Build the OS before the client load.** Infrastructure built under pressure gets built
-wrong. Every workflow, document, and automation is designed at full quality before the
-first client signs. The first engagement runs on a production system, not a prototype.
+**Build the operating layer before the client load.** Infrastructure built under pressure
+gets built wrong. Every workflow, document, and automation is designed at full quality
+before the first client signs, so the first engagement runs on a tested system, not a
+prototype.
 
 **Persistent context files over re-explaining every session.** Every Claude skill reads
-current business state from context files at session start. This means a new session
-doesn't require re-establishing context — the AI already knows the business, the client
-roster, the current OKRs, and the active constraints.
+current business state from context files at session start. A new session doesn't require
+re-establishing context — the AI already knows the business, the client roster, the
+current OKRs, and the active constraints.
 
 **"I" not "we" throughout all client-facing materials.** Solo practitioner reality is a
 competitive advantage: clients get the principal directly, always. No hand-offs to
@@ -77,30 +70,31 @@ associates. The marketing and documents reflect this explicitly.
 
 **Compliance calendar as the backbone.** For fund manager clients, missing a regulatory
 deadline is catastrophic. The compliance calendar is automated with 60-day advance
-alerts and is the first thing built for every new client engagement.
+alerts — with the calendar itself reviewed manually each month, because an automation
+guarding against catastrophic failure needs its own control — and it is the first thing
+built for every new client engagement.
 
 ## Current Milestone
 
-Repositioned May 28, 2026: the firm is now an AI-native fractional CFO + CCO practice
-serving four client profiles — emerging fund managers and family offices, independent
-sponsors and search funds, PE/VC portfolio companies, and owner-operated private
-businesses. The v2 website shell reflecting the new positioning was built June 1.
+Repositioned May 28, 2026: the firm is an AI-native fractional CFO + CCO practice
+aimed at emerging fund managers and family offices, independent sponsors and search
+funds, PE/VC portfolio companies, and owner-operated private businesses. The v2 website
+shell reflecting the new positioning was built June 1.
 
-As of early July, the OS is no longer just infrastructure-in-waiting — I'm running it on
-live consultancy work, with the public website now in final design ahead of launch (still
-pre-launch as of July 3). The system is proving itself on real engagements rather than
-rehearsals.
+As of early July: the OS runs the firm's own operations — intake through engagement
+letter through invoicing — and the public website is in final design ahead of launch.
+No client engagements yet; that's the next milestone, and this page will say so plainly
+when it changes.
 
 ## Lessons Learned
 
-The highest-leverage investment in a one-person firm is the operating system — not the
+The highest-leverage investment in a one-person firm is the operating layer — not the
 work product. Well-structured systems mean each additional client adds less marginal
 time than the last. Poorly structured systems mean each client adds a full linear load.
 
 Building the skills first, before client pressure created shortcuts, produced a
-significantly better result. The discipline to build the right foundation before
-generating revenue is the difference between a practice that compounds and a busy job.
+significantly better result.
 
 ---
 
-*Part of the [AI Architect Journey](../../README.md)*
+*Part of [Finance Engineering](../../README.md)*
