@@ -24,6 +24,14 @@ workforce housing initiative.
 - Proximity scoring (distance to services, infrastructure, employment centers)
 - Zoning compatibility flags
 
+## Current Milestone
+
+**Clean-slate rebuild in Claude Design (Jul 2026).** Rather than push v102 further, I
+rebuilt the analysis from a blank sheet in Claude Design (Fable) — a fresh pass at the
+same parcel problem. It landed at a much stronger endpoint and fed a presentation-ready
+deliverable, which the 101-iteration lineage never quite reached. The lesson: past a
+point, a clean rebuild beats another incremental version.
+
 ## Key Decisions
 
 **Python extraction over county purchase.** The county charges $2,500 for a full parcel

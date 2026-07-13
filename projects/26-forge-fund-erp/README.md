@@ -1,8 +1,8 @@
 # Forge — AI-Native Fund Accounting Platform
 
-**Status:** 🔄 Active — value-creation layer advancing, attested core stable  
+**Status:** 🔄 Active — web front end in progress over the attested core; SCF statement and value-creation layer advancing  
 **Started:** June 3, 2026  
-**Last updated:** July 3, 2026  
+**Last updated:** July 13, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
@@ -48,6 +48,17 @@ drift is detectable after the fact. ASC 946 financial statements (Statement of A
 Liabilities, Statement of Operations, Schedule of Investments, Financial Highlights),
 distribution waterfalls, and per-class LP economics are all derived from that one log.
 
+The front end is a Next.js 15 / React 19 / TypeScript-strict / Tailwind app, server-first
+on the App Router and wired straight to the FastAPI core — no separate reporting database
+to reconcile against. It already serves live, backend-wired ASC 946 statements, the
+distribution waterfall, partners' capital and per-LP highlights, the ingest tie-out and
+queue, and value-creation demos, each cell carrying a provenance color so a reader can see
+at a glance what's attested versus derived versus still pending. The current front-end
+work is a unified "command center" landing view I designed in Claude Design (Fable); the
+spec is locked and the hand-port into the app, behind the same type-check and lint gates
+as the rest of the build, is the next step. Working prototype throughout; the read-only
+viewer never gets a write path into the ledger.
+
 ## Where It Stands
 
 | Date | Shipped | Verification state |
@@ -60,6 +71,9 @@ distribution waterfalls, and per-class LP economics are all derived from that on
 | Late Jun | Per-class LP economics attested; live multi-class fund; MFN better-of-terms logic | Each anchor move: explicit go, pre-planned reseed, triple verification |
 | Jun 30–Jul 1 | Carried interest provable off the attested log; LP display serves attested rows | Six consecutive fresh-process reproducibility runs; all five funds byte-identical; 620 tests passing (0 failed); lint clean |
 | Jul 3 | Value-creation layer increments: predicted, thesis-mapped levers paired by hash to the realized EBITDA-to-equity bridge | CI green; anchor-neutral — pin gate confirmed no attested code touched; suite grew past the 620 baseline |
+| Jul 6 | Portfolio-company chart-of-accounts v2 reseed | Anchor move: pre-planned reseed, verified |
+| Jul 7 | Statement of Cash Flows (ASC 946 / ASC 230), direct view plus the mandatory reconciliation | LIGHT / read-only / anchor-neutral: reads ORM models only, zero bytes under `accounting/`, pin gate proves all five anchors frozen; tri-reviewed |
+| Jul 7 | Command-center landing view designed in Claude Design (Fable); D0 port spec locked over the already-live Next.js 15 / React 19 / Tailwind app | `web/`-only, no `forge/` touched; port gated at D0 — spec done, component code not yet written |
 
 One environmental caveat on the Jun 30 verification: the local Docker engine crashed
 repeatedly on the monolithic test run, so the suite ran per-file per the standing Windows

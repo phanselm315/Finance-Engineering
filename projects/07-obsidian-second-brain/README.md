@@ -22,6 +22,9 @@ densely linked web of notes. Capture was the first phase. Synthesis is now the m
     scrubbing my own handle before anything touches disk and routing each item to the right
     track; stock ideas go to the Stock Research track (Project 24), everything else lands as
     synthesis-ready source notes
+  - **Email-to-intake** — forward anything to a capture address and it lands in the vault's
+    intake queue; the next extension is voice notes, so a thought dictated on the go arrives
+    as synthesis-ready source material
 - **Synthesis layer:** the heart of the system now. Claude works captured material into
   two outputs that compound differently — **synthesized writing** (essays, arguments, and
   distilled pieces drawn from across the vault) and **structural linking** (maps of
@@ -30,6 +33,9 @@ densely linked web of notes. Capture was the first phase. Synthesis is now the m
   synthesis moving
 - **Integration:** Grok Brain Export (Project 18) feeds structured AI outputs into the
   vault as linked knowledge nodes
+- **Hosted layer:** the capture and intake jobs now run on a VPS rather than a single
+  laptop, so ingest keeps running whether or not I'm at my desk and the vault is reachable
+  from my phone. A vault MCP bridge — direct agent access to the notes — is the next piece
 
 ## Key Decisions
 

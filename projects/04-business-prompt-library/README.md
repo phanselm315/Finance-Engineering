@@ -48,4 +48,34 @@ markedly better output than a generic prompt. Scope traded for quality.
 
 The email skill got a measurement side: a single-file HTML scoring tool that checks
 AI-drafted community emails against the organization's brand voice and terminology rules —
-prohibited terms, required structural elements, tone in
+prohibited terms, required structural elements, tone indicators — with per-rule pass/fail
+and an overall grade. Two decisions carried it: **HTML over a Python script**, because
+the person reviewing emails is not running Python scripts, and **rule-based scoring over
+AI scoring**, because the rules are explicit and enumerable — hard-coded checks are
+faster, more transparent, and easier to audit. Building the rubric before scaling email
+volume surfaced several places where the style guidelines themselves were ambiguous or
+contradictory, and those got resolved before they became recurring problems.
+
+## Case Study: the Resume Skill
+
+Built after enough manual tailoring sessions to recognize the pattern was worth
+formalizing. Provide a job description; it produces a tailored version of a formatted
+master resume, selecting from a bank of pre-approved language rather than generating
+from scratch — resumes require specific, defensible language, not creative writing. Each
+real use refined the language bank and edge-case handling; the skill got noticeably
+better after each one, because each one fed an update. The general lesson: formalize a
+workflow into a skill *after* you've done it manually enough times to know where the
+friction and the judgment calls actually are.
+
+## Lessons Learned
+
+A well-structured system prompt with hard rules and rich context is 10x more useful than
+a generic prompt.
+
+The investment in building these skills upfront compounds across every session. Work that
+used to take an hour of back-and-forth now takes five minutes because the context is
+already loaded.
+
+---
+
+*Part of [Finance Engineering](../../README.md)*
