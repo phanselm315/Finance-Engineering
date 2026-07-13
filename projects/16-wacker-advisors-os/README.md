@@ -18,7 +18,9 @@ client engagement.
 - **Document suite:** NDA, Service Agreement, Named Officer Addendum — pre-filled from
   intake data, DocuSign-ready
 - **Compliance layer:** Regulatory deadline tracking, Form ADV reminders, SEC filing
-  calendar
+  calendar, and a scheduled regulatory-update ingest — a weekly sweep that pulls relevant
+  rule and enforcement changes into the practice, filtered to what actually bears on the
+  client profile rather than the full regulatory firehose
 - **Financial layer:** QuickBooks Online integration, automated invoicing on 1st of month
 
 **Claude skills deployed:**
@@ -82,9 +84,10 @@ funds, PE/VC portfolio companies, and owner-operated private businesses. The v2 
 shell reflecting the new positioning was built June 1.
 
 As of early July: the OS runs the firm's own operations — intake through engagement
-letter through invoicing — and the public website is in final design ahead of launch.
-No client engagements yet; that's the next milestone, and this page will say so plainly
-when it changes.
+letter through invoicing — and the public website is in final design ahead of launch. The
+scheduled regulatory-update ingest is live, running weekly and feeding rule changes into
+the practice. No client engagements yet; that's the next milestone, and this page will say
+so plainly when it changes.
 
 ## Lessons Learned
 

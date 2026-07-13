@@ -18,8 +18,8 @@ company's operating expense, is recorded once on a signed, reproducible ledger, 
 books follow by rule. The result is audit-ready books as a deliverable, and a valuation
 you can defend without a fire drill.
 
-I've migrated funds onto the incumbent platforms — Allvue, Dynamo, eFront. This is the
-platform I'd have wanted on those migrations.
+I've migrated funds onto the incumbent platforms — Allvue and Dynamo — and worked inside
+proprietary fund-admin systems besides. This is the platform I'd have wanted on those migrations.
 
 ## How It's Being Built
 
