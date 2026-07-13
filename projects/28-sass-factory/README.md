@@ -1,6 +1,6 @@
 # Sass Factory — Gated Software Factory
 
-**Status:** 🔄 Active — self-advancing loop has run a full end-to-end cycle; gate chain gained a new check  
+**Status:** 🔄 Active — self-advancing loop sustained across repeated backlog cycles; gate chain hardened further  
 **Started:** June 25, 2026  
 **Code:** Private build — kept high-level here; clean-room by design  
 
@@ -48,6 +48,14 @@ agent, gated on `check-all`, committed on green, and advanced — no human shutt
 between sessions. The gate chain also gained a new check, tightening the merge boundary further.
 Proof-before-merge held throughout: the factory kept building only what its own gates would pass.
 (Specifics tracked in the private build repo.)
+
+**Update (Jul 13).** The loop has kept running unattended since — shipping a run of
+gate-hardening backlog items through roughly #37 (fail-closed on a no-op commit, scrubbing
+config vars so they can't flip a review verdict, retry-then-fail-closed on a flaky check,
+closing the agent's push-bypass), with #38–44 already queued. The end-to-end cycle isn't a
+one-off; it's the factory's steady state. Two independent review passes have prompted me to
+weigh a different direction — pointing the gate chain at numeric-invariant
+fund-reconciliation work — which I'm still evaluating.
 
 ## Key Decisions
 
