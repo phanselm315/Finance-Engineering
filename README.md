@@ -2,7 +2,7 @@
 
 I solve finance operating problems for private capital.
 
-For fifteen years I've worked inside the institutions that run private capital's finance function — Big Four, Northern Trust fund administration, a long-standing internal PE investment program at Kirkland & Ellis — on fund and portco accounting, controllership, compliance, and reporting: ASC 946 statements, ERP implementations, close processes, audit and custody readiness, distribution waterfalls, and LP reporting.
+For fifteen years I've worked inside the institutions that run private capital's finance function — Big Four, Northern Trust fund administration, an emerging lower middle market PE firm, and a long-standing internal PE investment program at Kirkland & Ellis — on fund and portco accounting, controllership, compliance, and reporting: ASC 946 statements, ERP implementations, close processes, audit and custody readiness, distribution waterfalls, and LP reporting.
 
 Today AI lets me encode those operating models into software. That's the only reason AI is in this repo at all — it's the newest implementation layer for work I've been doing my whole career.
 
@@ -14,13 +14,13 @@ This is the public body of work behind that.
 
 Three builds carry the thesis. Each runs on synthetic or anonymized data with production-style logic — this is a lab, not a client environment.
 
-### [Forge — AI-Native Fund Accounting Platform](./projects/26-forge-fund-erp/)
+### [Forge — an AI-Native Operating Core for a PE Firm](./projects/26-forge-fund-erp/)
 
-**Problem.** Fund administration is built on reconciliation: the same capital activity keyed into four systems, then proven to agree every close. The duplicate sources of truth *are* the cost.
+**Problem.** A PE firm runs on numbers that live in separate systems: value-creation work happens at the portfolio companies, valuations get marked in a model, fund accounting sits in a fund-admin platform, and LP reporting is stitched together by hand each quarter. Every handoff is a reconciliation, and no one can trace a figure in an LP statement back to the operating initiative that produced it.
 
-**Approach.** One replayable, deterministic accounting core. ASC 946 statements, distribution waterfalls, and per-class LP reporting are *derived* from it, not reconciled into agreement.
+**Approach.** One replayable, deterministic core that carries the whole chain. A value-creation initiative at a portfolio company posts to a signed event log; it moves that company's valuation in the ledger; the new valuation flows up through the fund's distribution waterfall and per-class LP economics into ASC 946 statements and LP reporting — all *derived* from that one attested source, not reconciled into agreement. Nothing is hand-keyed twice, and every number traces back to the event that caused it.
 
-**Result.** Five demo funds replay byte-identical from a signed event log — statements, waterfalls, and per-class LP economics all derived from one attested source, with 600+ tests behind it. I've migrated funds onto Allvue, Dynamo, and eFront; this is the platform I'd have wanted on those migrations.
+**Result.** Five demo funds replay byte-identical from a signed event log, with the full chain — portfolio-company value creation, the valuations it moves, waterfalls, statements, and per-class LP economics — derived from that one attested source and 600+ tests behind it. The command center I'm building lets you watch it end to end: initiatives landing, the valuations they update in the ledger, and those marks flowing up to the LP number, each cell tagged attested, derived, or still pending. I've migrated funds onto Allvue, Dynamo, and eFront; this is the platform I'd have wanted on those migrations — one that runs the value-creation-to-LP chain those systems leave to spreadsheets.
 
 ### [Portfolio-Company Value-Creation Suite](./projects/20-value-creation-suite/)
 
