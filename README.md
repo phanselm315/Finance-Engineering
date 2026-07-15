@@ -26,7 +26,7 @@ Three builds carry the thesis. Each runs on synthetic or anonymized data with pr
 
 **Problem.** Operational-finance diagnostics for portfolio companies die as slides at the end of an engagement. The work isn't reusable and never rolls up to the fund.
 
-**Approach.** Four diagnostics, each pairing a deterministic engine with a narrow LLM judgment layer, each rolling a single-portco win up to a fund-level EBITDA bridge: Working Capital (AR / trapped-cash, collections outreach gated behind human approval), Freight (shipment history re-priced against live carrier rates), Inventory (ABC × XYZ segmentation, safety/cycle stock, fund-wide pooling), and Procurement (spend classification, tail/maverick risk, fund-wide negotiation playbook).
+**Approach.** Four diagnostics, each pairing a deterministic engine with a narrow LLM judgment layer, each rolling a single-portco win up to a fund-level EBITDA bridge: Working Capital (AR / trapped-cash, collections outreach gated behind human approval), Freight (shipment history re-priced against live carrier rates, fund-wide carrier-volume pooling), Inventory (ABC × XYZ segmentation, safety/cycle stock, fund-wide pooling), and Procurement (spend classification, tail/maverick risk, fund-wide negotiation playbook).
 
 **Result.** The diagnostic becomes a reusable fund asset instead of a one-time deliverable. Code is public for all four.
 

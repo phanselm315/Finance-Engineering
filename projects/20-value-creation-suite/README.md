@@ -58,7 +58,11 @@ status-quo inefficiency premium, the single largest assumption, is one named, tu
 parameter, and real rates are flagged separately from modeled fallbacks. The LLM writes
 exactly one thing: the carrier negotiation scorecard's talking points. The judgment here
 is in finding the cost line — recognizing freight as the largest *controllable*, unmanaged
-spend — not in the arithmetic that optimizes it.
+spend — not in the arithmetic that optimizes it. The fund rollup adds the lever no single
+company has on its own: pooled carrier volume negotiated as one buyer across the
+freight-intensive portcos, for a tiered discount (3 / 6 / 10% — light pooling, a base
+programme, a fully consolidated bloc) layered on top of each company's standalone result —
+value the fund captures that no mid-market company could command alone.
 
 ## 3. Inventory
 
