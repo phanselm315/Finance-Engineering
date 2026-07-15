@@ -1,8 +1,8 @@
 # Forge — AI-Native Fund Accounting Platform
 
-**Status:** 🔄 Active — web front end in progress over the attested core; SCF statement and value-creation layer advancing  
+**Status:** 🔄 Active — attested surfaces expanding (NWC rollforward now attested, LP highlights tiered); command-center front-end port still the pending step  
 **Started:** June 3, 2026  
-**Last updated:** July 13, 2026  
+**Last updated:** July 15, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
@@ -74,6 +74,9 @@ viewer never gets a write path into the ledger.
 | Jul 6 | Portfolio-company chart-of-accounts v2 reseed | Anchor move: pre-planned reseed, verified |
 | Jul 7 | Statement of Cash Flows (ASC 946 / ASC 230), direct view plus the mandatory reconciliation | LIGHT / read-only / anchor-neutral: reads ORM models only, zero bytes under `accounting/`, pin gate proves all five anchors frozen; tri-reviewed |
 | Jul 7 | Command-center landing view designed in Claude Design (Fable); D0 port spec locked over the already-live Next.js 15 / React 19 / Tailwind app | `web/`-only, no `forge/` touched; port gated at D0 — spec done, component code not yet written |
+| Jul 13 | Net-working-capital rollforward promoted to an attested surface (`AttestedNwcRollforward`) | RESEED-CLASS anchor move: pre-planned reseed; merged via PR #5, CI green |
+| Jul 14 | LP-surface audit: whole-fund Financial Highlights tiers, an IRR ruling, LP-inputs tier badges | Surface work over the attested log; CI green |
+| Jul 15 | Valuation-source scope (F5) tri-reviewed — reclassified HEAVY → predicted-LIGHT, rulings of record, FINAL ready | Scope locked; the build is the next step |
 
 One environmental caveat on the Jun 30 verification: the local Docker engine crashed
 repeatedly on the monolithic test run, so the suite ran per-file per the standing Windows

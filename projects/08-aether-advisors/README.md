@@ -8,7 +8,8 @@
 Scoped the AI back office for a family marketing business — AI image generation for
 client deliverables, marketing program design frameworks, brand strategy systems, and
 SEO/GEO (generative-engine optimization) audits. Personal project — my wife's business.
-Scoping and early experiments only; nothing shipped yet.
+Mostly scoping and experiments, but the first real deliverable shipped: a couple of
+SEO/GEO audits packaged with implementation instructions.
 
 ## Architecture
 

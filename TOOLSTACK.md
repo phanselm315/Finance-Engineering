@@ -2,7 +2,7 @@
 
 The working inventory of what I build with. It's the operational companion to the one-paragraph **Stack** blurb in the [README](./README.md) — that's the pitch, this is the parts list. Kept current so the stack itself compounds instead of scattering across projects.
 
-*Last updated: 2026-07-13*
+*Last updated: 2026-07-15*
 
 ---
 
