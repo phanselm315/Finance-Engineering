@@ -1,8 +1,8 @@
 # Forge — AI-Native Fund Accounting Platform
 
-**Status:** 🔄 Active — attested surfaces expanding (NWC rollforward now attested, LP highlights tiered); command-center front-end port still the pending step  
+**Status:** 🔄 Active — Command Center front end landed on main; attested surfaces still expanding (side pockets, nested/parallel vehicles, valuation source)  
 **Started:** June 3, 2026  
-**Last updated:** July 15, 2026  
+**Last updated:** July 25, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
@@ -53,11 +53,11 @@ on the App Router and wired straight to the FastAPI core — no separate reporti
 to reconcile against. It already serves live, backend-wired ASC 946 statements, the
 distribution waterfall, partners' capital and per-LP highlights, the ingest tie-out and
 queue, and value-creation demos, each cell carrying a provenance color so a reader can see
-at a glance what's attested versus derived versus still pending. The current front-end
-work is a unified "command center" landing view I designed in Claude Design (Fable); the
-spec is locked and the hand-port into the app, behind the same type-check and lint gates
-as the rest of the build, is the next step. Working prototype throughout; the read-only
-viewer never gets a write path into the ledger.
+at a glance what's attested versus derived versus still pending. The unified "command
+center" landing view I designed in Claude Design (Fable) is now ported and live on main,
+behind the same type-check and lint gates as the rest of the build, and the tables it
+fronts carry their own filter, sort, and column-drag. Working prototype throughout; the
+read-only viewer never gets a write path into the ledger.
 
 ## Where It Stands
 
@@ -77,6 +77,10 @@ viewer never gets a write path into the ledger.
 | Jul 13 | Net-working-capital rollforward promoted to an attested surface (`AttestedNwcRollforward`) | RESEED-CLASS anchor move: pre-planned reseed; merged via PR #5, CI green |
 | Jul 14 | LP-surface audit: whole-fund Financial Highlights tiers, an IRR ruling, LP-inputs tier badges | Surface work over the attested log; CI green |
 | Jul 15 | Valuation-source scope (F5) tri-reviewed — reclassified HEAVY → predicted-LIGHT, rulings of record, FINAL ready | Scope locked; the build is the next step |
+| Jul 16 | Valuation-source (F5) built and merged to main (PR #6); Command Center front end ported and landed on main (PR #7) | F5 independently verified and closed out; reconciliation trustworthy; CI green |
+| Jul 17 | A3 side pockets — LP × instrument participation with an attested cash-flow ledger | New attested surface; scope FINAL after tri-review + 5 rulings before any code |
+| Jul 18–23 | Nested/parallel vehicles — co-invest widened into a general primitive; two worked examples (co-invest sleeve, feeder) | Scope FINAL; both examples shipped; CI green |
+| Jul 23–24 | Front-end table interactions — filter/sort/column-drag across Portfolio, Key Figures, LP roster, Ingest Queue, Tie-Out, fund detail | Shipped in two waves; scope FINAL after a 4-pass review |
 
 One environmental caveat on the Jun 30 verification: the local Docker engine crashed
 repeatedly on the monolithic test run, so the suite ran per-file per the standing Windows

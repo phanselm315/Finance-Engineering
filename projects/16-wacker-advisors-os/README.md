@@ -5,11 +5,13 @@
 
 ## What This Is
 
-The operating layer for a one-man outsourced CFO/CCO/COO advisory firm serving emerging
-fund managers. Every workflow automated or AI-assisted: client onboarding, compliance
-calendar management, deliverable tracking, invoice generation, engagement letters, and
-quarterly reports. It runs the firm's own back office today, built ahead of the first
-client engagement.
+The operating layer for a one-man outsourced CFO/CCO/COO advisory firm. The firm serves
+private companies moving into institutional complexity — owner-led and PE-backed
+businesses that need finance to run like an institution — with fund CFO/CCO work for
+emerging managers as the credibility engine behind it. Every workflow automated or
+AI-assisted: client onboarding, compliance calendar management, deliverable tracking,
+invoice generation, engagement letters, and quarterly reports. It runs the firm's own
+back office today, built ahead of the first client engagement.
 
 ## Architecture
 
@@ -78,16 +80,18 @@ built for every new client engagement.
 
 ## Current Milestone
 
-Repositioned May 28, 2026: the firm is an AI-native fractional CFO + CCO practice
-aimed at emerging fund managers and family offices, independent sponsors and search
-funds, PE/VC portfolio companies, and owner-operated private businesses. The v2 website
-shell reflecting the new positioning was built June 1.
+Repositioned around a single audience: private companies entering institutional
+complexity. The public site now leads with the owner-led and PE-backed operating work as
+the front door and keeps the fund CFO/CCO practice as proof, rather than splitting the
+message across several separate segments. The "hasn't caught up to AI yet" hook is retired;
+automation is described as a concrete capability folded into the work, never the headline.
 
-As of early July: the OS runs the firm's own operations — intake through engagement
-letter through invoicing — and the public website is in final design ahead of launch. The
-scheduled regulatory-update ingest is live, running weekly and feeding rule changes into
-the practice. No client engagements yet; that's the next milestone, and this page will say
-so plainly when it changes.
+As of late July: the OS runs the firm's own operations — intake through engagement letter
+through invoicing — and the public site has been reworked into a single-page one-pager,
+copy locked and being rebuilt visually in Claude Design, close to launch. The scheduled
+regulatory-update ingest is live, running weekly and feeding rule changes into the
+practice. No client engagements yet; that's the next milestone, and this page will say so
+plainly when it changes.
 
 ## Lessons Learned
 
