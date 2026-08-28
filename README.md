@@ -12,7 +12,7 @@ This is the public body of work behind that.
 
 ## Selected Work
 
-Three builds carry the thesis. Each runs on synthetic or anonymized data with production-style logic — this is a lab, not a client environment.
+Four builds carry the thesis. Each runs on synthetic or anonymized data with production-style logic — this is a lab, not a client environment.
 
 ### [Forge — an AI-Native Operating Core for a PE Firm](./projects/26-forge-fund-erp/)
 
@@ -37,6 +37,14 @@ Three builds carry the thesis. Each runs on synthetic or anonymized data with pr
 **Approach.** The firm's operating model made executable — compliance calendars, deliverable tracking, and document automation, with the recurring judgment encoded as rules and dedicated domain skills for SEC private-funds compliance and ASC 946 accounting. The judgment compounds: every call I make is captured once and reused, so each decision makes the next one cheaper instead of starting from scratch. A scheduled regulatory-update ingest pulls rule changes into the practice so nothing relevant slips past. All compliance output is reviewed and owned by me; the system accelerates, it doesn't decide.
 
 **Result.** It runs the firm's own back office today — intake through engagement letter through invoicing — built ahead of the first client engagement.
+
+### [AI-Native Consulting OS](./projects/29-ai-native-consulting-os/)
+
+**Problem.** A consulting firm rolling out AI faces two questions that decide whether it helps or hurts. Does the value from an engagement compound, or does it evaporate when the engagement closes? And does client data stay where it belongs? Most rollouts hand people a prompt library and hope — an artifact that is model-specific, unowned, and quietly deskills the bench.
+
+**Approach.** Encode the practice's operating model rather than its prompts. Three layers kept deliberately apart — a portable orientation kit a new hire clones, a centrally governed capability library that compounds and is never forked, and per-client engagement workspaces where all the real data stays. The unit is a *capability* — a versioned, stewarded method carrying its inputs, its human procedure, and its known failure modes — not a prompt. Three boundaries run through every task (environment, evidence, authority), risk tiers match ceremony to blast radius, and a two-minute close review turns each engagement into a scrubbed contribution that a steward, not the author, publishes. A coach mode asks a developing consultant for their own read before revealing the firm's, so people earn judgment while inheriting it.
+
+**Result.** Every control in it is a controls habit pointed at a new problem: the clean-room rule is an information barrier, submit-then-publish is segregation of duties, the evidence labels are a tickmark legend, the tier table is an approval matrix. Design locked at v2 and stress-tested with a new-hire walkthrough; the worked fictional engagement runs the full loop, from a restricted-cash failure caught in a 13-week cash flow to the capability version it bumped. Next is one real engagement.
 
 ---
 

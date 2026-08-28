@@ -2,7 +2,7 @@
 
 The working inventory of what I build with. It's the operational companion to the one-paragraph **Stack** blurb in the [README](./README.md) — that's the pitch, this is the parts list. Kept current so the stack itself compounds instead of scattering across projects.
 
-*Last updated: 2026-07-25*
+*Last updated: 2026-08-28*
 
 ---
 
@@ -10,6 +10,7 @@ The working inventory of what I build with. It's the operational companion to th
 
 - **Claude** — primary. Haiku for high-volume extraction and classification, Sonnet for reasoning, agents, and anything with judgment in the loop.
 - **Grok** — secondary reasoning and cross-checks.
+- **ChatGPT** — third opinion on design work. Used with Grok as an independent critique pair: two models review a design separately and the conflicts get reconciled before anything locks (how the [AI-Native Consulting OS](./projects/29-ai-native-consulting-os/) reached v2).
 - **Local / open models** — in the mix for private or high-volume work that shouldn't leave the machine.
 
 ## Languages & Frameworks
@@ -81,6 +82,7 @@ The working inventory of what I build with. It's the operational companion to th
 - **Signed artifacts** — provenance on outputs.
 - **CI gates** — nothing merges unproven.
 - **Human-approval gates** — before any agent touches the outside world.
+- **Evidence labeling + task-level risk tiers** — the control pattern from the [AI-Native Consulting OS](./projects/29-ai-native-consulting-os/): every material assertion tagged `[sourced]/[derived]/[assumption]/[estimate]/[judgment]`, and every task tiered by its action and destination so ceremony matches blast radius. Portable to any build where a model drafts and a human owns the output.
 
 ---
 
