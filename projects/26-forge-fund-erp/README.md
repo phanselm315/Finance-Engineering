@@ -1,8 +1,8 @@
 # Forge — AI-Native Fund Accounting Platform
 
-**Status:** 🔄 Active — Command Center front end landed on main; attested surfaces still expanding (side pockets, nested/parallel vehicles, valuation source)  
+**Status:** ⏸️ At rest since August 3, 2026 — the Command Center front end and every attested surface through nested/parallel vehicles landed on main  
 **Started:** June 3, 2026  
-**Last updated:** July 25, 2026  
+**Last updated:** August 31, 2026  
 **Code:** Private build — details deliberately high-level here  
 
 ## What This Is
@@ -81,10 +81,24 @@ read-only viewer never gets a write path into the ledger.
 | Jul 17 | A3 side pockets — LP × instrument participation with an attested cash-flow ledger | New attested surface; scope FINAL after tri-review + 5 rulings before any code |
 | Jul 18–23 | Nested/parallel vehicles — co-invest widened into a general primitive; two worked examples (co-invest sleeve, feeder) | Scope FINAL; both examples shipped; CI green |
 | Jul 23–24 | Front-end table interactions — filter/sort/column-drag across Portfolio, Key Figures, LP roster, Ingest Queue, Tie-Out, fund detail | Shipped in two waves; scope FINAL after a 4-pass review |
+| Jul 24 | Journal view — page-scoped client-side sort, with CSV export following the sort | Extracted as a client component with the server-side filter and pagination byte-identical, independently diffed twice; 129/129 web tests, typecheck and lint clean |
 
 One environmental caveat on the Jun 30 verification: the local Docker engine crashed
 repeatedly on the monolithic test run, so the suite ran per-file per the standing Windows
 protocol; the reproducibility core covers the stability concern independently.
+
+### At rest since August 3
+
+Nothing has been committed since August 3. That is a stopping point, not a stall: the
+Command Center front end, the valuation-source scope, side pockets, and nested/parallel
+vehicles all landed and closed out, and what remains in the queue — the ingest map-book
+work, and a content-safety review of two dozen old unmerged branches — is waiting on
+attention rather than on anything unresolved.
+
+One late-July recount belongs in the record. The ingest map-book gate had been carried
+for weeks as "one portfolio company has rule history." Grepping every fund and vehicle
+log directly turned up zero. The corrected number moves that gate further out of reach,
+not closer, which is exactly why the flattering reading was the easy one to keep.
 
 ### A failure worth recording
 
