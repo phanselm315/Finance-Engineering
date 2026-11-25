@@ -1,6 +1,6 @@
 # Wacker Advisors OS
 
-**Status:** 🔄 Active — runs the firm's back office; no client engagements yet  
+**Status:** ⏸️ Paused — the practice is dormant while I'm full-time at a PE-focused consulting firm; the design stands as built  
 **Started:** Mar 2026  
 
 ## What This Is
@@ -10,8 +10,9 @@ private companies moving into institutional complexity — owner-led and PE-back
 businesses that need finance to run like an institution — with fund CFO/CCO work for
 emerging managers as the credibility engine behind it. Every workflow automated or
 AI-assisted: client onboarding, compliance calendar management, deliverable tracking,
-invoice generation, engagement letters, and quarterly reports. It runs the firm's own
-back office today, built ahead of the first client engagement.
+invoice generation, engagement letters, and quarterly reports. It ran the firm's own
+back office, built ahead of the first client engagement. The practice is paused and not
+taking engagements (see Current Milestone).
 
 ## Architecture
 
@@ -80,7 +81,13 @@ built for every new client engagement.
 
 ## Current Milestone
 
-Repositioned around a single audience: private companies entering institutional
+**Paused, November 2026.** I joined a PE-focused consulting firm full-time in August, and
+the practice is dormant — no client engagements were taken, and none are being taken now.
+The OS stays as built: the positioning, the document suite, and the compounding layer are
+the design I'd restart from. The operating-model instinct moved to where the work is —
+see the [Office of the CFO Skill Suite](../30-office-of-the-cfo-skill-suite/).
+
+**Before the pause:** Repositioned around a single audience: private companies entering institutional
 complexity. The public site now leads with the owner-led and PE-backed operating work as
 the front door and keeps the fund CFO/CCO practice as proof, rather than splitting the
 message across several separate segments. The "hasn't caught up to AI yet" hook is retired;

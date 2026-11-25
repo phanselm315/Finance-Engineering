@@ -1,6 +1,6 @@
 # AI-Native Consulting OS
 
-**Status:** 🔄 Active — v2 design locked and stress-tested with a new-hire walkthrough; pre-deployment  
+**Status:** 🔄 Active — the pattern now shapes a real firm's AI rollout; the standalone kit itself stays pre-deployment  
 **Started:** August 9, 2026  
 **Code:** Private build — kept high-level here; written against a hypothetical firm  
 
@@ -108,6 +108,18 @@ restricted-cash failure gets caught, scrubbed, and fed back to bump the capabili
 
 Next is the part that matters — running it on one real engagement to see whether the close
 review actually survives contact with a deadline.
+
+**November 2026.** The kit didn't get deployed as a kit. Its pattern did. At the PE-focused
+consulting firm I joined, the capability-not-prompt unit, the stewarded library, and the
+risk tiers shaped how the firm builds and promotes its
+[Office of the CFO skills](../30-office-of-the-cfo-skill-suite/) — a status ladder from
+development through team testing to production, with each skill reviewed before it
+reaches a client. The data boundary carried over too: the firm's document store stays
+outside the agent harness, and material reaches the engagement hubs by a one-way copy.
+The same platform now runs engagement hubs in Notion with budgets and time synced from
+project tracking and the ERP; a business-development lead engine and a per-person command
+center are in build. The standalone kit's own close review still hasn't met a real
+deadline — that test is still owed.
 
 ## Lessons Learned
 

@@ -6,13 +6,23 @@ For fifteen years I've worked inside the institutions that run private capital's
 
 Today AI lets me encode those operating models into software. That's the only reason AI is in this repo at all — it's the newest implementation layer for work I've been doing my whole career.
 
+Today I do that work at a PE-focused consulting firm, where I build the Office of the CFO skill suite our delivery team runs on.
+
 This is the public body of work behind that.
 
 ---
 
 ## Selected Work
 
-Four builds carry the thesis. Each runs on synthetic or anonymized data with production-style logic — this is a lab, not a client environment.
+Five builds carry the thesis. The first runs in production at my current firm and is described rather than linked; the rest run on synthetic or anonymized data with production-style logic.
+
+### [Office of the CFO Skill Suite + Agent Rollout](./projects/30-office-of-the-cfo-skill-suite/)
+
+**Problem.** A PE-backed company needs the same finance deliverables every month — statements, 13-week cash, debt and borrowing-base math, a board-package tie-out, a closing statement — and a consulting bench rebuilds them engagement after engagement, with the judgment living in whoever built the last one. Hand that bench a model and it gets worse: the model fills a missing term with a plausible number and widens a tolerance until the check passes.
+
+**Approach.** Thirteen skills across four workflows, built at the PE-focused consulting firm where I work now, on one rule: judgment goes once into a file a person reviews, and everything after it is deterministic. Every term carries its source and an honest confidence (*doc, derived, assumed, missing*); the build refuses to run until the review is stamped; and the workbook is recalculated, checked to zero, and compared figure-by-figure to an independent engine within $0.01. No plug, ever — a check that couldn't run reports SKIPPED, never passed.
+
+**Result.** Ten skills in production and three in development, in use across a delivery team of about 45, promoted up a status ladder from development through team testing to production. The suite is now part of a wider firm platform I'm helping build — a model-agnostic agent harness, engagement hubs, and a data boundary that keeps the firm's document store out of the agent's reach by design. It's the one build here with a whole team depending on it.
 
 ### [Forge — an AI-Native Operating Core for a PE Firm](./projects/26-forge-fund-erp/)
 
@@ -36,7 +46,7 @@ Four builds carry the thesis. Each runs on synthetic or anonymized data with pro
 
 **Approach.** The firm's operating model made executable — compliance calendars, deliverable tracking, and document automation, with the recurring judgment encoded as rules and dedicated domain skills for SEC private-funds compliance and ASC 946 accounting. The judgment compounds: every call I make is captured once and reused, so each decision makes the next one cheaper instead of starting from scratch. A scheduled regulatory-update ingest pulls rule changes into the practice so nothing relevant slips past. All compliance output is reviewed and owned by me; the system accelerates, it doesn't decide.
 
-**Result.** It runs the firm's own back office today — intake through engagement letter through invoicing — built ahead of the first client engagement.
+**Result.** It ran the firm's own back office — intake through engagement letter through invoicing — built ahead of the first client engagement. The practice is paused while I'm full-time at a consulting firm; the design stands as built.
 
 ### [AI-Native Consulting OS](./projects/29-ai-native-consulting-os/)
 
@@ -44,7 +54,7 @@ Four builds carry the thesis. Each runs on synthetic or anonymized data with pro
 
 **Approach.** Encode the practice's operating model rather than its prompts. Three layers kept deliberately apart — a portable orientation kit a new hire clones, a centrally governed capability library that compounds and is never forked, and per-client engagement workspaces where all the real data stays. The unit is a *capability* — a versioned, stewarded method carrying its inputs, its human procedure, and its known failure modes — not a prompt. Three boundaries run through every task (environment, evidence, authority), risk tiers match ceremony to blast radius, and a two-minute close review turns each engagement into a scrubbed contribution that a steward, not the author, publishes. A coach mode asks a developing consultant for their own read before revealing the firm's, so people earn judgment while inheriting it.
 
-**Result.** Every control in it is a controls habit pointed at a new problem: the clean-room rule is an information barrier, submit-then-publish is segregation of duties, the evidence labels are a tickmark legend, the tier table is an approval matrix. Design locked at v2 and stress-tested with a new-hire walkthrough; the worked fictional engagement runs the full loop, from a restricted-cash failure caught in a 13-week cash flow to the capability version it bumped. Next is one real engagement.
+**Result.** Every control in it is a controls habit pointed at a new problem: the clean-room rule is an information barrier, submit-then-publish is segregation of duties, the evidence labels are a tickmark legend, the tier table is an approval matrix. Design locked at v2 and stress-tested with a new-hire walkthrough; the worked fictional engagement runs the full loop, from a restricted-cash failure caught in a 13-week cash flow to the capability version it bumped. The kit itself hasn't been deployed; its pattern has — the capability unit, the stewarded library, and the risk tiers now shape how the Office of the CFO skills above get built and promoted.
 
 ---
 
@@ -81,7 +91,7 @@ Adjacent work — good builds, but supporting evidence rather than the main thes
 
 ## Stack
 
-Python · TypeScript · FastAPI · async SQLAlchemy · PostgreSQL · Next.js / React. Claude as the primary model (Haiku for extraction, Sonnet for reasoning and agents); Grok and local models in the mix. Controls-grade hygiene: pytest, strict mypy, Docker, signed artifacts, CI gates, custom MCP servers and Claude skills. Finance plumbing through QuickBooks Online, Plaid, and Financial Modeling Prep.
+Python · TypeScript · FastAPI · async SQLAlchemy · PostgreSQL · Next.js / React. Claude as the primary model (Haiku for extraction, Sonnet for reasoning and agents); Grok and local models in the mix. Controls-grade hygiene: pytest, strict mypy, Docker, signed artifacts, CI gates, custom MCP servers and Claude skills — and for Excel deliverables, headless recalculation, checks that must read zero, and an independent engine every figure is compared against. Finance plumbing through QuickBooks Online, Plaid, and Financial Modeling Prep.
 
 The full parts list — connectors, skills, and orchestration — is in [`TOOLSTACK.md`](./TOOLSTACK.md).
 
