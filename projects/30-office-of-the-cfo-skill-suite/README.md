@@ -4,13 +4,15 @@
 **Started:** August 2026  
 **Code:** Built at my current firm, a PE-focused consulting firm, on client work. The code is the firm's, so this page stays high-level: no code, no client data, no internal names.
 
-> A PE-backed company needs the same finance deliverables every month — statements, a 13-week cash forecast, debt and borrowing-base math, a board-package tie-out, a closing statement — and every consultant was rebuilding them in a spreadsheet the next reviewer had to re-derive before trusting.
+> A founder-run company takes on its first private equity sponsor, and its finance team, which kept the business running for years, suddenly has to produce and defend an institutional reporting package it has never been asked for.
 
 ## The Operating Problem
 
-On a consulting bench, the same deliverables get rebuilt engagement after engagement. Each one carries judgment that lives in one person's head: which document wins when the credit agreement and the borrowing-base register disagree, what a covenant test actually counts, when a variance is a finding versus a rounding difference. When that judgment isn't written down, the work doesn't compound, and the reviewer can't tell a real number from a plausible one.
+The overwhelmed founder-run company is the real customer here. The deal closes, and the questions start the same month: a board package the sponsor reads line by line, lender covenants and a borrowing-base certificate, a 13-week cash forecast, a closing-statement true-up, and a deal team in the systems asking why a control works the way it does. The controller who kept the books clean for a founder is now answering to an investor, a lender, and an auditor at once. None of that means the business was run badly. The audience changed, and the bar moved with it.
 
-Handing the bench a model makes that worse, not better. A model will happily fill a missing term with a number that looks right, widen a tolerance until a check passes, and present a workbook in the same breath it built it.
+My firm sends consultants in to close that gap, and the same deliverables get rebuilt engagement after engagement. Each one carries judgment that lives in one person's head: which document wins when the credit agreement and the borrowing-base register disagree, what a covenant test actually counts, when a variance is a finding versus a rounding difference. When that judgment isn't written down, the work doesn't compound, the founder's team inherits a spreadsheet it can't maintain, and the reviewer can't tell a real number from a plausible one.
+
+Handing the bench a model makes that worse, not better. A model will happily fill a missing term with a number that looks right, widen a tolerance until a check passes, and present a workbook in the same breath it built it. For a company already under new scrutiny, a plausible wrong number in the first board package is the fastest way to lose the sponsor's trust.
 
 ## The Engineering Approach
 
