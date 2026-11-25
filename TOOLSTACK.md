@@ -31,7 +31,7 @@ The working inventory of what I build with. It's the operational companion to th
 
 What I build on at my current firm, named by tool but not by internal system name (see [Office of the CFO Skill Suite](./projects/30-office-of-the-cfo-skill-suite/)).
 
-- **Model-agnostic agent harness** — runs the firm's skills so the model can be swapped for a cheaper one without rewriting the method. Per-project versus per-person agent architecture, injected standard profiles, scheduled jobs (weekly dashboards), and a promotion path for a skill proven in Claude to move onto the harness.
+- **Hermes** — the agent harness that runs the firm's skills, so the model can be swapped for a cheaper one without rewriting the method. Hermes is publicly available; the firm's instance is custom-built to spin up local instances on virtual desktops. Per-project versus per-person agent architecture, injected standard profiles, scheduled jobs (weekly dashboards), and a promotion path for a skill proven in Claude to move onto the harness.
 - **Claude Enterprise Projects + Claude Docs** — team testing and shared context for skills on their way up the status ladder.
 - **Claude Code** — build tool for the firm's command-center app.
 - **Notion** — engagement hubs and the collaborative workspace.
@@ -73,13 +73,13 @@ What I build on at my current firm, named by tool but not by internal system nam
 
 ### Built at my current firm (described, not linked — the firm's IP)
 
-Thirteen skills on one pipeline (inventory → stop on bad sources → extract to a reviewed file → build → gate → report):
+Fourteen skills on one pipeline (inventory → stop on bad sources → extract to a reviewed file → build → gate → report):
 
 - **Financial statements** — trial balance to income statement, indirect cash flow, consolidation, over a shared statement library.
 - **Cash and liquidity** — 13-week cash forecast orchestrating a cash-data audit, the model workbook, and a cash flash memo; debt schedule; borrowing-base certificate (in development).
 - **Board reporting** — board-package tie-out and variance drivers (in development).
-- **Transactions** — closing statement and NWC true-up.
-- **Next** — cutoff testing, budget builder, quality of earnings, cross-system tie-out, payroll accrual.
+- **Transactions** — closing statement and NWC true-up; opening balance sheet (in development).
+- **Next** — cutoff testing first, then budget builder, quality of earnings, cross-system tie-out, payroll accrual.
 
 ### Stock (Anthropic)
 

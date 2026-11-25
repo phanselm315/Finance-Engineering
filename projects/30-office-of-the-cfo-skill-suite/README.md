@@ -1,6 +1,6 @@
 # Office of the CFO Skill Suite + Agent Rollout
 
-**Status:** 🔄 Active — ten skills in production, three in development; in use across a delivery team of about 45  
+**Status:** 🔄 Active — ten skills in production, four in development; in use across a delivery team of about 45  
 **Started:** August 2026  
 **Code:** Built at my current firm, a PE-focused consulting firm, on client work. The code is the firm's, so this page stays high-level: no code, no client data, no internal names.
 
@@ -14,14 +14,15 @@ Handing the bench a model makes that worse, not better. A model will happily fil
 
 ## The Engineering Approach
 
-Thirteen skills across four workflows, all on one philosophy: **judgment goes into a file a person reviews, and everything after that is deterministic, gated, and traceable to a source.**
+Fourteen skills across four workflows, all on one philosophy: **judgment goes into a file a person reviews, and everything after that is deterministic, gated, and traceable to a source.**
 
 | Workflow | What the skills cover |
 | --- | --- |
 | Financial statements | Trial balance to income statement, indirect cash flow, consolidation — thin skills over one shared statement library so layouts can't drift |
 | Cash and liquidity | 13-week cash forecast that orchestrates a cash-data audit, the model workbook, and a cash flash memo; debt schedule; borrowing-base certificate (in development) |
 | Board reporting | Board-package tie-out and variance drivers (both in development) |
-| Transactions | Closing statement and NWC true-up |
+| Transactions | Closing statement and NWC true-up; opening balance sheet (in development) |
+| Next | Cutoff testing |
 
 Every production skill runs the same seven-stage pipeline, and only one stage uses judgment:
 
@@ -37,7 +38,7 @@ Every production skill runs the same seven-stage pipeline, and only one stage us
 
 The skills move up a status ladder — in development → shareable → team testing → agent-harness candidate → production — so nothing reaches a client engagement on the strength of a demo. Every deliverable is still reviewed by a professional before it reaches a client; the output is a starting point, not a sign-off.
 
-The suite is now one piece of a wider firm platform I'm helping build. A model-agnostic agent harness runs the skills so the firm can switch to cheaper models without rewriting them; engagement hubs live in Notion; budgets and time entry sync from the firm's project-tracking system and its ERP. The data boundary is a design decision, not a setting: the firm's document store stays outside the agent harness, and material reaches the engagement hubs by a one-way copy. Next is a business-development tool with a lead engine feeding an internally built CRM, integrated with Teams, Outlook, and the calendar — then a command center where each person sees their engagements, budgets, and blockers.
+The suite is now one piece of a wider firm platform I'm helping build. Hermes, a publicly available agent harness, runs the skills so the firm can switch to cheaper models without rewriting them — our instance is custom-built to spin up local instances on virtual desktops; engagement hubs live in Notion; budgets and time entry sync from the firm's project-tracking system and its ERP. The data boundary is a design decision, not a setting: the firm's document store stays outside the agent harness, and material reaches the engagement hubs by a one-way copy. Next is a business-development tool with a lead engine feeding an internally built CRM, integrated with Teams, Outlook, and the calendar — then a command center where each person sees their engagements, budgets, and blockers.
 
 ## Key Decisions
 
