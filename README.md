@@ -12,7 +12,7 @@ Today I do that work at a PE-focused consulting firm, where I build the Office o
 
 ## Selected Work
 
-Five builds carry the thesis. The first runs in production at my current firm, so I describe it rather than link it. The rest run on synthetic or anonymized data with production-style logic.
+Six builds carry the thesis. The first runs in production at my current firm, so I describe it rather than link it. The rest run on synthetic or anonymized data with production-style logic.
 
 ### [Office of the CFO Skill Suite + Agent Rollout](./projects/30-office-of-the-cfo-skill-suite/)
 
@@ -21,6 +21,14 @@ Five builds carry the thesis. The first runs in production at my current firm, s
 **Approach.** Fourteen skills across four workflows, built at the firm where I work now. We used templates before. A template carries the format but not the decisions: the budgeting calls and the rulings from prior monthly reviews lived in people's heads and inboxes, not with the client's numbers. The skills hold that judgment in the context of each business, in one file a person reviews. Everything after that file is deterministic. Every term carries its source and an honest confidence (*doc, derived, assumed, missing*). The build won't run until the review is stamped. The workbook is recalculated, checked to zero, and compared figure by figure to an independent engine within $0.01. No plug, ever. A check that couldn't run reports SKIPPED, never passed.
 
 **Result.** Ten skills in production and four in development, in use across a delivery team of about 45. Each skill climbs a status ladder from development through team testing to production. The suite now sits inside a wider firm platform I'm helping build: Hermes, a publicly available agent harness the firm runs as a custom build on virtual desktops; engagement hubs; and a data boundary that keeps the firm's document store out of the agent's reach by design. It is the one build here with a whole team depending on it.
+
+### [Remit-to-Cash: Cash Application for a PE-Backed PT Rollup](./projects/31-remit-to-cash/)
+
+**Problem.** A physical therapy rollup buys clinics faster than it standardizes billing. Each clinic brings its own billing system, payers, cash process, and bank accounts. Every month the CFO asks whether the cash the payers said they paid is actually in the bank, and where it isn't, why, and who owns the fix. Today posters match remits to bank lines by hand, recoupments get netted silently, and unapplied cash sits in suspense.
+
+**Approach.** One decision, the daily cash-application call, built as a measured workflow. 835s go through a deterministic parser. The model reads paper remittances only, and every value it extracts cites its span on the page, which code checks. Matching, balancing at $0.00 tolerance, and dispositions are rules. A twelve-type exception taxonomy is the boundary where a person decides. The system never posts cash. A 48-case golden set, six gates, a frozen holdout run once, and an independent verifier that reproduced the holdout scorecard without a model call.
+
+**Result.** v1 is released: on its single holdout run, all six gates passed, zero false AUTO_CLEARs, 22 of 22 exceptions caught, and 1,869 of 1,870 fields correct. The scanned-paper extension never produced a false AUTO_CLEAR either, but it failed three gates, so my own release gate blocked it. A v3 round with four targeted fixes now passes every gate on dev and waits on its one holdout run. Total model spend: $7.35 against a $20 cap. All data is synthetic, and the repo says so before it shows a number.
 
 ### [Forge: an AI-Native Operating Core for a PE Firm](./projects/26-forge-fund-erp/)
 

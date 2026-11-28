@@ -2,7 +2,7 @@
 
 The working inventory of what I build with. It's the operational companion to the one-paragraph **Stack** blurb in the [README](./README.md) — that's the pitch, this is the parts list. Kept current so the stack itself compounds instead of scattering across projects.
 
-*Last updated: 2026-11-24*
+*Last updated: 2026-11-27*
 
 ---
 
@@ -107,6 +107,9 @@ Fourteen skills on one pipeline (inventory → stop on bad sources → extract t
 - **Signed artifacts** — provenance on outputs.
 - **CI gates** — nothing merges unproven.
 - **Human-approval gates** — before any agent touches the outside world.
+- **Frozen holdout + independent verifier.** The evaluation pattern from [Remit-to-Cash](./projects/31-remit-to-cash/): a golden set with expected outputs derived by code that cannot import the pipeline, a holdout run once per release candidate, a separate verifier agent that reproduces the scorecard from saved outputs, and a version table generated from scorecards, never typed.
+- **Spend ledger with a hard cap.** Every model call priced into a ledger; a call that could cross the cap is refused before it is sent.
+- **Tesseract OCR.** Scanned-remit ingest in Remit-to-Cash, with low-confidence words masked rather than guessed.
 - **LibreOffice headless recalc + openpyxl** — the delivery gate for Excel workbooks: recalculate, scan for errors and `###`, require every check at zero, and compare each figure to an independent engine within $0.01.
 - **Skill status ladder** — in development → shareable → team testing → agent-harness candidate → production. Nothing reaches a client engagement on the strength of a demo.
 - **Skill release discipline** — versioned release zips with CHANGELOGs, a single check-all script before commit, regression fixtures with signed-off answer keys, and a rule that every fix ships with a test that fails without it.
